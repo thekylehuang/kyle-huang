@@ -1,0 +1,70 @@
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('/fonts/BebasNeue.ttf') format('truetype');
+}
+
+:root {
+  --hero-text-color: #f1eedd;
+  --hero-headline-font: "Bebas Neue", sans-serif;
+}
+
+.hero-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: 40px 40px;
+  background-image: radial-gradient(circle, #DDDDDD 1.5px, rgba(0, 0, 0, 0) 1.5px);
+  mask-image: radial-gradient(ellipse 110% 90%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 60%);
+  -webkit-mask-image: radial-gradient(ellipse 110% 90%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 60%);
+  pointer-events: none;
+}
+
+.hero-background {
+  height: 800px;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.hero-headline {
+  font-display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: var(--hero-text-color);
+  font-size: clamp(100px,25vw,300px);
+  font-family: var(--hero-headline-font);
+  font-weight: 800;
+  line-height: 0.9;
+}
+
+@media screen and (max-width: 1000px) {
+  .hero-headline {
+    top: 150px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .hero-headline {
+    top: 150px;
+  }
+}
+@media screen and (max-width: 530px) {
+  .hero-headline {
+    white-space: normal;
+    font-size: clamp(100px, 40vw, 300px);
+    line-height: 0.9;
+  }
+}
+@media screen and (max-width: 460px) {
+  .hero-headline {
+    top: 130px;
+  }
+}

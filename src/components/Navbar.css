@@ -1,0 +1,213 @@
+@font-face {
+  font-family: 'Geist';
+  src: url('/fonts/Geist.ttf') format(truetype);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #050505;
+  border: 1px solid #ffffff52;  
+  height: 57px;
+  border-radius: 28px;
+  width: 90%;
+  max-width: 500px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 20px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1000;
+  transition: height 210ms cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+.home {
+  margin-left: 25px;
+  margin-right: -10px;
+}
+
+.home-icon {
+  display: none;
+}
+
+.separator {
+  width: 1px;
+  height: 25px;
+  background-color: #ffffff69;
+}
+
+.nav-link {
+  transition: 150ms color ease;
+  font-family: 'Geist';
+  color: #BBBBBB;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #EEEEEE;
+}
+
+.contact {
+  transition: background 200ms ease, border 200ms ease;
+  margin-right: 10px;
+  background: #301466;
+  border: 1px solid #5f29cc;
+  color: #FAFAFA;
+  padding: 6px 20px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-family: 'Geist';
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.contact:hover {
+  background: #442680;
+  border: 1px solid #7b45e6;
+}
+
+.contact-icon {
+  margin-right: 12px;
+  font-size: 18px;
+}
+
+.menu-btn {
+  position: absolute;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 1;
+  top: 19px;
+  right: 20px;
+}
+
+.menu-btn-icon {
+  width: 18px;
+  height: 2px;
+  background: transparent;
+  position: relative;
+  display: none;
+}
+
+.menu-btn-icon::before {
+  position: absolute;
+  width: 18px;
+  height: 2px;
+  content: '';
+  background: #ffffff;
+  left: 0;
+  transform: translateY(-3px);
+  border-radius: 1px;
+  transition: transform 150ms ease;
+}
+
+.menu-btn-icon::after {
+  content: '';
+  background: #ffffff;
+  transform: translateY(3px);
+  position: absolute;
+  width: 18px;
+  height: 2px;
+  left: 0;
+  border-radius: 1px;
+  transition: transform 150ms ease;
+}
+
+.menu-btn-icon.animate-menu-icon::before {
+  transform: rotate(45deg);
+}
+
+.menu-btn-icon.animate-menu-icon::after {
+  transform: rotate(-45deg);
+}
+
+.expanded-content {
+  display: none;
+}
+
+@media screen and (max-width: 530px) {
+  .portfolio, .hermien, .blog, .contact, .separator {
+    display: none;
+  }
+  .home {
+    transition: background 200ms ease, border 200ms ease;
+    color: #FAFAFA;
+    background: #301466;
+    border: 1px solid #5f29cc;
+    padding: 7px 15px;
+    border-radius: 20px;
+    position: absolute;
+    margin: 0;
+    top: 6px;
+    left: 10px;
+  }
+  .home:hover {
+    color: #FAFAFA;
+    background: #442680;
+    border: 1px solid #7b45e6;
+  }
+  .home-icon {
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 8px;
+  }
+  .menu-btn-icon {
+    display: inline-block;
+  }
+  .expanded {
+    height: 310px;
+  }
+  .expanded-content {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    width: 90vw;
+    height: 245px;
+    position: fixed;
+    padding: 0px 15px 25px 10px;
+    clip-path: inset(0 0 100% 0);
+    left: 0;
+    right: 0;
+    top: 77px;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1001;
+    transition: clip-path 210ms cubic-bezier(0.4, 0, 0.6, 1);
+  }
+  .expanded-content.reveal-expanded {
+    clip-path: inset(0 0 0 0);
+  }
+  .expanded-link {
+    font-family: 'Geist';
+    color: #EEEEEE;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+    box-sizing: border-box;
+    width: 84vw;
+    padding: 15px 16px;
+    border-radius: 20px;
+    transition: background-color 200ms ease;
+  }
+  .expanded-link:hover {
+    background-color: #1a1a1a;
+  }
+  .expanded-link-icon {
+    margin-right: 10px;
+  }
+}
