@@ -150,7 +150,7 @@ nav {
     border-radius: 20px;
     position: absolute;
     margin: 0;
-    top: 6px;
+    top: 8px;
     left: 10px;
   }
   .home:hover {
@@ -162,6 +162,8 @@ nav {
     display: inline-block;
     font-size: 16px;
     margin-right: 8px;
+    position: relative;
+    top: -2px;
   }
   .menu-btn-icon {
     display: inline-block;
@@ -193,14 +195,14 @@ nav {
   }
   .expanded-link {
     font-family: 'Geist';
-    color: #EEEEEE;
+    color: #FAFAFA;
     font-size: 16px;
     font-weight: 600;
     text-decoration: none;
     position: relative;
     box-sizing: border-box;
     width: 84vw;
-    padding: 15px 16px;
+    padding: 15px 18px;
     border-radius: 20px;
     transition: background-color 200ms ease;
   }
@@ -209,5 +211,6 @@ nav {
   }
   .expanded-link-icon {
     margin-right: 10px;
+    display: inline-block;
   }
 }
