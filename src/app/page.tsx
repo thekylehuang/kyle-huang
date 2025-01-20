@@ -5,6 +5,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Kyle Huang | Creator & Polymath',
   description: 'Kyle Huang is a creator and a polymath, with an interest in finance and economics.',
+  keywords: ['Kyle Huang', 'creator', 'finance', 'technology', 'economics', 'personal growth', 'finance'],
   openGraph: {
     title: 'Kyle Huang | Creator & Polymath',
     description: 'Kyle Huang is a creator and a polymath, with an interest in finance and economics.',
