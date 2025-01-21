@@ -1,9 +1,12 @@
 "use client"
 
+import { Geist } from 'next/font/google'
 import './Navbar.css'
 import Link from 'next/link'
 import { useState } from "react";
 import Image from 'next/image';
+
+const geist = Geist({ subsets: ['latin'] })
 
 const Navbar = () => {
   const [expanded, toggleExpanded] = useState(false);
@@ -13,7 +16,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <nav className={expanded ? 'expanded' : ''}>
+      <nav className={`${geist.className} ${expanded ? "expanded" : ""}`}>
         <Link href="/" className='nav-link home'><Image src="/icons/home.svg" className="home-icon" alt="Home Icon" width={18} height={18} />Home</Link>
         <div className='separator'></div>
         <Link href="/portfolio" className='nav-link portfolio'>Portfolio</Link>
