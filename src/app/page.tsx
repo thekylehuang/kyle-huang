@@ -1,6 +1,8 @@
 import './Home.css';
-import Head from 'next/head'
 import type { Metadata } from 'next'
+import { Bebas_Neue } from 'next/font/google';
+
+const bebasNeue = Bebas_Neue({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
   title: 'Kyle Huang | Creator & Polymath',
@@ -23,12 +25,9 @@ export const metadata: Metadata = {
 const Home = () => {
   return(
     <>
-    <Head>
-      <link rel="preload" href="/fonts/BebasNeue.ttf" as="font" type="font/ttf" crossOrigin='anonymous' />
-    </Head>
       <main>
-        <div className='hero-background'>
-          <h1 className='hero-headline'>Kyle Huang</h1>
+        <div className='hero-background relative h-[800px] w-full'>
+          <h1 className={`${bebasNeue.className} hero-headline absolute left-0 right-0 mx-auto text-center font-extrabold`} style={{ color: 'var(--hero-text-color))', lineHeight: '0.9', top: '150px' }}>Kyle Huang</h1>
         </div>
       </main>
     </>
