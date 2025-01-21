@@ -27,7 +27,7 @@ const Home = () => {
     <>
       <main>
         <div className='hero-background relative h-[800px] w-full'>
-          <h1 className={`${bebasNeue.className} hero-headline absolute left-0 right-0 mx-auto text-center font-extrabold`} style={{ color: 'var(--hero-text-color))', lineHeight: '0.9', top: '150px' }}>Kyle Huang</h1>
+          <h1 className={`${bebasNeue.className} hero-headline`}>Kyle Huang</h1>
         </div>
       </main>
     </>
