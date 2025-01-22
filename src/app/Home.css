@@ -17,14 +17,6 @@
   pointer-events: none;
 }
 
-.hero-background {
-  height: 800px;
-  width: 100vw;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
 .hero-headline {
   font-display: block;
   position: absolute;
