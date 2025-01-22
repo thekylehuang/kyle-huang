@@ -1,8 +1,3 @@
-:root {
-  --hero-text-color: #f1eedd;
-  --hero-headline-font: "Bebas Neue", sans-serif;
-}
-
 .hero-background::before {
   content: '';
   position: absolute;
@@ -26,7 +21,11 @@
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  color: var(--hero-text-color);
+  background: -webkit-linear-gradient(#fff, #b3b7b4);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #fff;
   font-size: clamp(100px,25vw,300px);
   font-family: var(--hero-headline-font);
   font-weight: 800 !important;
