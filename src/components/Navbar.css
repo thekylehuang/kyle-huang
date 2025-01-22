@@ -48,10 +48,10 @@ nav {
 }
 
 .contact {
-  transition: background 200ms ease, border 200ms ease;
+  transition: border 150ms ease;
   margin-right: 10px;
-  background: #301466;
-  border: 1px solid #5f29cc;
+  background: #2e1065;
+  border: 1px solid #5b21b6;
   color: #FAFAFA;
   padding: 6px 20px;
   border-radius: 20px;
@@ -65,8 +65,7 @@ nav {
 }
 
 .contact:hover {
-  background: #442680;
-  border: 1px solid #7b45e6;
+  border: 1px solid #6d28d9;
 }
 
 .contact-icon {
@@ -137,10 +136,10 @@ nav {
     display: none;
   }
   .home {
-    transition: background 200ms ease, border 200ms ease;
+    transition: border 150ms ease;
     color: #FAFAFA;
-    background: #301466;
-    border: 1px solid #5f29cc;
+    background: #2e1065;
+    border: 1px solid #5b21b6;
     padding: 7px 15px;
     border-radius: 20px;
     position: absolute;
@@ -150,8 +149,7 @@ nav {
   }
   .home:hover {
     color: #FAFAFA;
-    background: #442680;
-    border: 1px solid #7b45e6;
+    border: 1px solid #6d28d9;
   }
   .home-icon {
     display: inline-block;
