@@ -1,17 +1,29 @@
-nav {
+.navbar {
+  background: #09090b;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9);
+  width: 100vw;
+  height: 75px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #3f3f46;  
+}
+
+.center-navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #09090b;
   border: 1px solid #3f3f46;  
-  height: 56px;
+  height: 55px;
   border-radius: 28px;
   width: 90%;
   max-width: 500px;
   position: fixed;
   left: 0;
   right: 0;
-  top: 20px;
+  top: 10px;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -70,7 +82,6 @@ nav {
 
 .contact-icon {
   margin-right: 12px;
-  font-size: 18px;
 }
 
 .menu-btn {
@@ -144,8 +155,8 @@ nav {
     border-radius: 20px;
     position: absolute;
     margin: 0;
-    top: 8px;
-    left: 10px;
+    top: 7px;
+    left: 8px;
   }
   .home:hover {
     color: #FAFAFA;
@@ -153,7 +164,6 @@ nav {
   }
   .home-icon {
     display: inline-block;
-    font-size: 16px;
     margin-right: 8px;
     position: relative;
     top: -2px;
@@ -162,7 +172,7 @@ nav {
     display: inline-block;
   }
   .expanded {
-    height: 310px;
+    height: 440px;
   }
   .expanded-content {
     gap: 10px;
@@ -171,13 +181,13 @@ nav {
     align-items: center;
     box-sizing: border-box;
     width: 90vw;
-    height: 245px;
+    height: 400px;
     position: fixed;
-    padding: 0px 15px 25px 10px;
+    padding: 5px 15px 25px 10px;
     clip-path: inset(0 0 100% 0);
     left: 0;
     right: 0;
-    top: 77px;
+    top: 60px;
     margin-left: auto;
     margin-right: auto;
     z-index: 1001;
@@ -195,7 +205,7 @@ nav {
     position: relative;
     box-sizing: border-box;
     width: 84vw;
-    padding: 15px 18px;
+    padding: 15px 14px;
     border-radius: 20px;
     transition: background-color 200ms ease;
   }
