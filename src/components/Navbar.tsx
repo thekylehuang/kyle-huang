@@ -1,48 +1,37 @@
 "use client"
 
-import { Geist } from 'next/font/google';
-import './Navbar.css';
 import Link from 'next/link';
-import { useState } from "react";
-import { Mail, House, BriefcaseBusiness, TrendingUp, Feather, LogIn, UserPlus } from 'lucide-react';
+import { Geist } from 'next/font/google'
+import { Command, ChevronRight } from 'lucide-react'
+import { ModeToggle } from '@/components/ModeToggle';
 
-
-const geist = Geist({ subsets: ['latin'] })
+const geist = Geist({
+  subsets: ['latin'],
+})
 
 const Navbar = () => {
-  const [expanded, toggleExpanded] = useState(false);
-
-  const toggleNavbar = () => {
-    toggleExpanded((prevState) => !prevState);
-  };
   return (
     <>
-      <div className="navbar">
-        <Link href="/" className={`${geist.className} absolute font-bold left-8 z-10 text-3xl top-5 hidden lg:inline-block`}>Kyle Huang</Link>
-        <nav className={`${geist.className} ${expanded ? "expanded" : ""} center-navbar`}>
-          <Link href="/" className='nav-link home'><House className='home-icon' size={20}/>Home</Link>
-          <div className='separator'></div>
-          <Link href="/portfolio" className='nav-link portfolio'>Portfolio</Link>
-          <Link href="/hermien" className='nav-link hermien'>Hermien</Link>
-          <Link href="/blog" className='nav-link blog'>Blog</Link>
-          <Link href="/contact" className='contact'><Mail className="contact-icon" size={20}/>Contact</Link>
-          <div className="menu-btn" role="button" onClick={toggleNavbar}>
-            <div className={`menu-btn-icon ${expanded ? 'animate-menu-icon' : ''}`}></div>
-          </div>
-        </nav>
-        <Link href="/login" className={`${geist.className} absolute font-semibold top-5 bg-neutral-800 px-4 py-1 rounded-lg text-neutral-200 border border-neutral-700 hover:border-neutral-600 right-36 hidden lg:inline-block transition-colors`}>Login</Link>
-        <Link href="/signup" className={`${geist.className} absolute right-8 top-5 font-semibold bg-violet-950 px-4 py-1 rounded-lg border border-violet-800 hover:border-violet-700 hidden lg:inline-block transition-colors`}>Sign Up</Link>
-      </div>
-      <div className={`expanded-content ${expanded ? 'reveal-expanded' : ''}`}>
-        <Link href="/portfolio" className="expanded-link"><BriefcaseBusiness className='expanded-link-icon' size={20} />Portfolio</Link>
-        <Link href="/hermien" className="expanded-link"><TrendingUp className='expanded-link-icon' size={20} />Hermien</Link>
-        <Link href="/blog" className="expanded-link"><Feather className='expanded-link-icon' size={20} />Blog</Link>
-        <Link href="/contact" className="expanded-link"><Mail className='expanded-link-icon' size={20} />Contact</Link>
-        <Link href="/login" className="expanded-link"><LogIn className='expanded-link-icon' size={20} />Login</Link>
-        <Link href="/signup" className="expanded-link"><UserPlus className='expanded-link-icon' size={20} />Sign Up</Link>
-      </div>
+      <nav className={`${geist.className} fixed left-0 top-0 flex items-center w-full h-14 border-b border-zinc-700 z-50 bg-zinc-50 dark:bg-neutral-950`}>
+        <div className='flex items-center justify-center h-14 px-6 border-r border-zinc-700'>
+          <Link href='/' className='text-neutral-950 dark:text-zinc-50 text-base font-bold'><Command size={24} className='inline mr-2 align-middle -mt-2px' />Kyle Huang</Link>
+        </div>
+        <div className='hidden lg:inline-block'>
+          <Link href='/portfolio' className='text-sm text-neutral-700 dark:text-neutral-400 ml-4 font-semibold py-2 px-4 rounded-lg hover:bg-zinc-200 dark:hover:bg-zinc-900 transition-colors'>Portfolio</Link>
+          <Link href='/blog' className='text-sm text-neutral-700 dark:text-neutral-400 ml-px font-semibold py-2 px-4 rounded-lg hover:bg-zinc-200 dark:hover:bg-zinc-900 transition-colors'>Blog</Link>
+          <Link href='/projects' className='text-sm text-neutral-700 dark:text-neutral-400 ml-px font-semibold py-2 px-4 rounded-lg hover:bg-zinc-200 dark:hover:bg-zinc-900 transition-colors'>Projects</Link>
+          <Link href='/resources' className='text-sm text-neutral-700 dark:text-neutral-400 ml-px font-semibold py-2 px-4 rounded-lg hover:bg-zinc-200 dark:hover:bg-zinc-900 transition-colors'>Resources</Link>
+          <Link href='/shop' className='text-sm text-neutral-700 dark:text-neutral-400 ml-px font-semibold py-2 px-4 rounded-lg hover:bg-zinc-200 dark:hover:bg-zinc-900 transition-colors'>Shop</Link>
+          <Link href='/contact' className='text-sm text-neutral-700 dark:text-neutral-400 ml-px font-semibold py-2 px-4 rounded-lg hover:bg-zinc-200 dark:hover:bg-zinc-900 transition-colors'>Contact</Link>
+        </div>
+        <div className='fixed right-0 h-14 border-l border-zinc-700 px-6 flex items-center justify-center'>
+          <ModeToggle />
+          <Link href='login' className='dark:text-zinc-50 text-xs dark:bg-neutral-800 py-1.5 px-3 rounded-md border dark:border-neutral-700 font-medium mr-3 dark:hover:border-zinc-600 transition-colors text-neutral-950 bg-neutral-100'>Sign In</Link>
+          <Link href='signup' className='text-zinc-50 text-xs bg-violet-800 dark:bg-violet-950 py-1.5 px-3 rounded-md border dark:border-violet-800 font-medium hover:bg-purple-pale dark:hover:border-violet-700 transition-colors border-purple-950'>Get Started<ChevronRight size={14} className='inline ml-1 text-zinc-300 -mt-2px' /></Link>
+        </div>      
+      </nav>
     </>
   );
-}
+} 
 
 export default Navbar;

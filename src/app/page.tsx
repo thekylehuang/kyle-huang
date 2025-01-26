@@ -1,8 +1,4 @@
-import './Home.css';
 import type { Metadata } from 'next'
-import { Bebas_Neue } from 'next/font/google';
-
-const bebasNeue = Bebas_Neue({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
   title: 'Kyle Huang | Creator & Polymath',
@@ -26,8 +22,7 @@ const Home = () => {
   return(
     <>
       <main>
-        <div className='hero-background relative h-[800px] w-full'>
-          <h1 className={`${bebasNeue.className} hero-headline`}>Kyle Huang</h1>
+        <div className='relative h-[800px] w-full bg-zinc-50 dark:bg-neutral-950'>
         </div>
       </main>
     </>
