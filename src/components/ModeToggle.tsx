@@ -16,7 +16,7 @@ export function ModeToggle() {
   }
 
   return (
-    <button onClick={() => setTheme(theme === "light" ? "dark" : "light")} className="text-light dark:text-dark mr-3 -ml-3">
+    <button onClick={() => setTheme(theme === "light" ? "dark" : "light")} className="text-light dark:text-dark sm:mr-3 md:mr-2 lg:mr-3 md:-ml-3">
       {theme === "light" ? <Moon size={20} className="hover:bg-zinc-100 p-1.5 h-8 w-8 rounded-md transition-colors"/> : <Sun size={20} className="hover:bg-zinc-900 p-1.5 h-8 w-8 rounded-md transition-colors"/>}
     </button>
   )
