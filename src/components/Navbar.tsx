@@ -12,7 +12,7 @@ const geist = Geist({
 })
 
 const Navbar = () => {
-  const [isExpanded, setIsExpanded] = useState(false)
+  const [isExpanded, setIsExpanded] = useState<boolean>(false)
 
   const toggleBottomSheet = () => {
     setIsExpanded(prevState => !prevState)
