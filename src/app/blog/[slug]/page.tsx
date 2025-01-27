@@ -5,7 +5,6 @@ import { useParams } from "next/navigation";
 import supabase from "@/utils/supabase";
 import ReactMarkdown from "react-markdown";
 import { Geist } from "next/font/google"; 
-import { Text } from "@geist-ui/core"; 
 import './blog.css'
 
 const geist = Geist({ subsets: ["latin"] });
