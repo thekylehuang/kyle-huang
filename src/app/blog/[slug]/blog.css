@@ -1,0 +1,116 @@
+/* Define default (light mode) colors */
+:root {
+  --text-light: #0a0a0a;  /* Light mode text color */
+  --text-dark: #FAFAFA;   /* Dark mode text color */
+  --border-light: #ccc;   /* Light mode border color */
+  --border-dark: #555;    /* Dark mode border color */
+  --link-light: #0070f3;  /* Light mode link color */
+  --link-dark: #0070f3;   /* Dark mode link color */
+}
+
+/* Apply to light mode (default) */
+.light {
+  --text-color: var(--text-light);
+  --border-color: var(--border-light);
+  --link-color: var(--link-light);
+  background-color: #FAFAFA;
+  color: var(--text-color);
+}
+
+/* Apply to dark mode */
+.dark {
+  --text-color: var(--text-dark);
+  --border-color: var(--border-dark);
+  --link-color: var(--link-dark);
+  background-color: #0a0a0a;
+  color: var(--text-color);
+}
+
+/* Container styles */
+.markdown-container {
+  margin-top: 8rem;
+  max-width: 80ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.markdown-container h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  text-align: left;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.markdown-container p {
+  line-height: 1.75rem;
+  margin-top: 1.5rem;
+}
+
+.markdown-container p:not(:first-child) {
+  margin-top: 1.5rem;
+}
+
+.markdown-container h2 {
+  margin-top: 2.5rem;
+  font-size: 1.875rem;
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  text-align: left;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+.markdown-container blockquote {
+  margin-top: 1.5rem;
+  border-left: 2px solid var(--border-color);
+  padding-left: 1.5rem;
+  font-style: italic;
+}
+
+.markdown-container h3 {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.05em;
+}
+
+.markdown-container a {
+  font-weight: 500;
+  color: var(--link-color);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.markdown-container a:hover {
+  text-decoration: none;
+}
+
+.markdown-container ul {
+  margin-top: 1.5rem;
+  margin-left: 2rem;
+}
+
+.markdown-container ul li {
+  margin-top: 0.5rem;
+  list-style-type: disc;
+}
+
+.markdown-container table {
+  width: 100%;
+  margin-top: 1.5rem;
+  border-collapse: collapse;
+}
+
+.markdown-container th,
+.markdown-container td {
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  text-align: left;
+}
+
+.markdown-container th {
+  font-weight: bold;
+}
+
