@@ -1,58 +1,51 @@
-"use client";
-
-import { useEffect, useState } from "react";
-import { useParams } from "next/navigation";
 import supabase from "@/utils/supabase";
-import ReactMarkdown from "react-markdown";
-import { Geist } from "next/font/google"; 
-import './blog.css'
+import BlogPostPage from "@/components/blog/BlogPage";
 
-const geist = Geist({ subsets: ["latin"] });
+export async function generateMetadata({ params }: { params: { slug: string } }) {
+  const { slug } = params;
+  const { data: post, error } = await supabase
+    .from("posts")
+    .select("title, description")
+    .eq("slug", slug)
+    .single();
 
-interface Post {
-  id: number;
-  title: string;
-  content: string;
-}
-
-const BlogPostPage = () => {
-  const { slug } = useParams();
-  const [post, setPost] = useState<Post | null>(null);
-
-  useEffect(() => {
-    const fetchPost = async () => {
-      const { data, error } = await supabase
-        .from("posts")
-        .select("*")
-        .eq("slug", slug)
-        .single();
-
-      if (error) {
-        console.error("Error fetching post:", error.message);
-        return;
-      }
-
-      setPost(data || null);
-    };
-
-    fetchPost();
-  }, [slug]);
-
-  if (!post) {
-    return null; 
+  if (error || !post) {
+    console.error("Error fetching metadata:", error?.message);
+    return { title: "Post Not Found" }; 
   }
 
-  return (
-    <div className={`mt-32 ${geist.className} markdown-container mb-24`}>
-      <div className="max-w-5xl mx-auto w-11/12">
-        <h1 className="scroll-m-20 font-extrabold tracking-tight text-5xl text-neutral-950 dark:text-zinc-50">
-          {post.title}
-        </h1>
-        <ReactMarkdown>{post.content}</ReactMarkdown>
-      </div>
-    </div>
-  );
+  return {
+    title: post.title,
+    description: post.description,
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      type: "article",
+      images: [
+        {
+          url: "https://kyle-huang.vercel.app/images/OpenGraphImage.png",
+          width: 1200,
+          height: 630,
+          alt: `${post.title} Cover Image`,
+        }
+      ]
+    }
+  };
+}
+
+const BlogPage = async ({ params }: { params: { slug: string } }) => {
+  const { slug } = params;
+  const { data: post, error } = await supabase
+    .from("posts")
+    .select("*")
+    .eq("slug", slug)
+    .single();
+
+  if (error || !post) {
+    console.error("Error fetching post:", error?.message);
+    return <div className="text-center mt-32">Post not found.</div>;
+  }
+  return <BlogPostPage post={post} />;
 };
 
-export default BlogPostPage;
-
+export default BlogPage;

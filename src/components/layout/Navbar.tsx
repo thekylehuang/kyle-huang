@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { Geist } from 'next/font/google'
 import { Command, ChevronRight, Menu } from 'lucide-react'
-import { ModeToggle } from '@/components/ModeToggle'
+import { ModeToggle } from '@/components/layout/ModeToggle'
 import { motion, AnimatePresence } from 'motion/react'
 import { useState } from 'react'
 

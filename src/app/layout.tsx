@@ -1,7 +1,7 @@
 import "./globals.css"
-import Navbar from '../components/Navbar'
+import Navbar from '../components/layout/Navbar'
 import { SpeedInsights } from '@vercel/speed-insights/next'
-import { ThemeProvider } from '@/components/theme-provider'
+import { ThemeProvider } from '@/components/layout/theme-provider'
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

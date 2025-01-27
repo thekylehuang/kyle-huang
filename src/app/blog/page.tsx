@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import BlogList from '@/components/BlogList'
+import BlogList from '@/components/blog/BlogList'
 
 export const metadata: Metadata = {
   title: 'Kyle Huang | Blogs',
