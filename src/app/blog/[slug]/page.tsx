@@ -1,7 +1,12 @@
 import supabase from "@/utils/supabase";
 import BlogPostPage from "@/components/blog/BlogPage";
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
+interface Params {
+  slug: string;
+}
+
+
+export async function generateMetadata({ params }: { params: Params }) {
   const { slug } = params;
   const { data: post, error } = await supabase
     .from("posts")
