@@ -12,7 +12,7 @@ interface Post {
   content: string;
 }
 
-const BlogPage = ({ post }: { post: Post }) => {
+const BlogPageComponent = ({ post }: { post: Post }) => {
   return (
     <div className={`mt-32 ${geist.className} markdown-container mb-24`}>
       <div className="max-w-5xl mx-auto w-11/12">
@@ -25,5 +25,4 @@ const BlogPage = ({ post }: { post: Post }) => {
   );
 };
 
-export default BlogPage;
-
+export default BlogPageComponent;

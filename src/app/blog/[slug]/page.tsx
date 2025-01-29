@@ -1,13 +1,8 @@
 import supabase from "@/utils/supabase";
-import BlogPostPage from "@/components/blog/BlogPage";
+import BlogPageComponent from "@/components/blog/BlogPage";
 
-interface Params {
-  slug: string;
-}
-
-
-export async function generateMetadata({ params }: { params: Params }) {
-  const { slug } = params;
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
   const { data: post, error } = await supabase
     .from("posts")
     .select("title, description")
@@ -38,19 +33,14 @@ export async function generateMetadata({ params }: { params: Params }) {
   };
 }
 
-const BlogPage = async ({ params }: { params: { slug: string } }) => {
-  const { slug } = params;
-  const { data: post, error } = await supabase
-    .from("posts")
-    .select("*")
-    .eq("slug", slug)
-    .single();
-
+const BlogPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
+  const { slug } = await params;
+  const { data: post, error } = await supabase.from("posts").select("*").eq("slug", slug).single();
   if (error || !post) {
     console.error("Error fetching post:", error?.message);
     return <div className="text-center mt-32">Post not found.</div>;
   }
-  return <BlogPostPage post={post} />;
+  return <BlogPageComponent post={post} />;
 };
 
 export default BlogPage;
