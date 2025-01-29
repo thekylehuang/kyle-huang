@@ -16,6 +16,7 @@ export function ModeToggle() {
   if (!mounted) return null
 
   const isDark = theme === "dark"
+  if (!mounted || !theme) return null;
 
   return (
     <label className="relative inline-flex items-center cursor-pointer">
