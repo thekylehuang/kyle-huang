@@ -68,7 +68,6 @@ const Navbar = () => {
             <Link href='/shop' className='text-2xl font-medium text-neutral-700 dark:text-neutral-400 block ml-5 mt-3 w-[calc(100%-2.5rem)]'>Shop</Link>
             <div className='w-[calc(100%-2.5rem)] h-px bg-zinc-700 ml-5 mt-3'></div>
             <Link href='/contact' className='text-2xl font-medium text-neutral-700 dark:text-neutral-400 block ml-5 mt-3 w-[calc(100%-2.5rem)]'>Contact</Link>
-            <div className='w-[calc(100%-2.5rem)] h-px bg-zinc-700 ml-5 mt-3 mb-14'></div>
           </div>
         </motion.div>      
       </nav>
