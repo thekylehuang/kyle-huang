@@ -7,7 +7,7 @@ import { motion } from "framer-motion"
 
 export function ModeToggle() {
   const [mounted, setMounted] = useState(false)
-  const { theme, setTheme } = useTheme()
+  const { resolvedTheme, setTheme } = useTheme()
 
   useEffect(() => {
     setMounted(true)
@@ -15,8 +15,7 @@ export function ModeToggle() {
 
   if (!mounted) return null
 
-  const isDark = theme === "dark"
-  if (!mounted || !theme) return null;
+  const isDark = resolvedTheme === "dark"
 
   return (
     <label className="relative inline-flex items-center cursor-pointer">
