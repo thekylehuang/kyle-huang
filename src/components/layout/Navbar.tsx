@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { Geist } from 'next/font/google'
-import { Command, ChevronRight, Menu } from 'lucide-react'
+import { Command, Menu } from 'lucide-react'
 import { ModeToggle } from '@/components/layout/ModeToggle'
 import { motion, AnimatePresence } from 'motion/react'
 import { useState } from 'react'
@@ -35,13 +35,11 @@ const Navbar = () => {
         </div>
         <div className='fixed right-0 h-14 border-l border-zinc-700 lg:px-6 px-4 flex items-center justify-center z-0'>
           <ModeToggle />
-          <Link href='login' className='hidden sm:inline dark:text-zinc-50 text-xs dark:bg-neutral-800 py-1.5 px-3 rounded-md border dark:border-neutral-700 font-medium mr-3 dark:hover:border-zinc-600 transition-colors text-zinc-50 bg-neutral-800 border-zinc-950'>Sign In</Link>
-          <Link href='signup' className='hidden sm:inline text-zinc-50 text-xs bg-violet-700 dark:bg-violet-950 py-1.5 px-3 rounded-md border dark:border-violet-800 font-medium dark:hover:bg-purple-pale dark:hover:border-violet-700 transition-colors border-purple-950'>Get Started<ChevronRight size={14} className='inline ml-1 text-zinc-300 -mt-2px' /></Link>
         </div>
         <AnimatePresence>
           {isExpanded && (
             <motion.div
-              className="fixed md:hidden top-0 left-0 w-full h-full bg-black bg-opacity-40 backdrop-blur-[1px] z-20"
+              className="fixed md:hidden top-0 left-0 w-full h-full bg-black bg-opacity-40 backdrop-blur-[5px] z-20"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -70,10 +68,7 @@ const Navbar = () => {
             <Link href='/shop' className='text-2xl font-medium text-neutral-700 dark:text-neutral-400 block ml-5 mt-3 w-[calc(100%-2.5rem)]'>Shop</Link>
             <div className='w-[calc(100%-2.5rem)] h-px bg-zinc-700 ml-5 mt-3'></div>
             <Link href='/contact' className='text-2xl font-medium text-neutral-700 dark:text-neutral-400 block ml-5 mt-3 w-[calc(100%-2.5rem)]'>Contact</Link>
-            <div className='w-[calc(100%-2.5rem)] h-px bg-zinc-700 ml-5 mt-3'></div>
-            <Link href='/login' className='text-2xl font-medium text-neutral-700 dark:text-neutral-400 block ml-5 mt-3 w-[calc(100%-2.5rem)]'>Log In</Link>
-            <div className='w-[calc(100%-2.5rem)] h-px bg-zinc-700 ml-5 mt-3'></div>
-            <Link href='/signup' className='text-2xl font-medium text-neutral-700 dark:text-neutral-400 block ml-5 mt-3 w-[calc(100%-2.5rem)] mb-10'>Sign Up</Link>
+            <div className='w-[calc(100%-2.5rem)] h-px bg-zinc-700 ml-5 mt-3 mb-14'></div>
           </div>
         </motion.div>      
       </nav>

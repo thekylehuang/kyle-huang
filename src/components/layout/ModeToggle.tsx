@@ -3,6 +3,7 @@
 import { Moon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
 import { useEffect, useState } from "react"
+import { motion } from "framer-motion"
 
 export function ModeToggle() {
   const [mounted, setMounted] = useState(false)
@@ -11,13 +12,47 @@ export function ModeToggle() {
   useEffect(() => {
     setMounted(true)
   }, [])
-  if (!mounted) {
-    return null
-  }
+
+  if (!mounted) return null
+
+  const isDark = theme === "dark"
 
   return (
-    <button onClick={() => setTheme(theme === "light" ? "dark" : "light")} className="text-light dark:text-dark sm:mr-3 md:mr-2 lg:mr-3 md:-ml-3">
-      {theme === "light" ? <Moon size={20} className="hover:bg-zinc-100 p-1.5 h-8 w-8 rounded-md transition-colors"/> : <Sun size={20} className="hover:bg-zinc-900 p-1.5 h-8 w-8 rounded-md transition-colors"/>}
-    </button>
+    <label className="relative inline-flex items-center cursor-pointer">
+      <input
+        type="checkbox"
+        checked={isDark}
+        onChange={() => setTheme(isDark ? "light" : "dark")}
+        className="sr-only peer"
+      />
+      <motion.div
+        layout
+        initial={false}
+        className="w-16 h-7 bg-zinc-50 peer-checked:bg-neutral-950 rounded-full flex items-center px-1.5 transition-colors relative border border-neutral-950 dark:border-zinc-50"
+      >
+        <motion.div
+          initial={false}
+          animate={{ opacity: isDark ? 1 : 0, scale: isDark ? 1 : 0.8 }}
+          transition={{ duration: 0.2 }}
+          className="absolute left-2"
+        >
+          <Sun size={18} className="text-neutral-950 dark:text-zinc-50" />
+        </motion.div>
+        <motion.div
+          layout
+          transition={{ type: "spring", stiffness: 250, damping: 20 }}
+          className="w-5 h-5 bg-neutral-950 dark:bg-zinc-50 rounded-full"
+          animate={{ x: isDark ? 32 : -2 }}
+        />
+        <motion.div
+          initial={false} 
+          animate={{ opacity: isDark ? 0 : 1, scale: isDark ? 0.8 : 1 }}
+          transition={{ duration: 0.2 }}
+          className="absolute right-2"
+        >
+          <Moon size={18} className="text-neutral-950 dark:text-zinc-50" />
+        </motion.div>
+      </motion.div>
+    </label>
   )
 }
