@@ -57,7 +57,7 @@ const Navbar = () => {
         transition={{ type: "spring", damping: 15 }}
         >
           <div className='overflow-y-auto h-full absolute top-2 w-full'>
-            <Link href='/' className='text-2xl font-medium text-neutral-700 dark:text-neutral-400 block ml-5 mt-4 w-[calc(100%-2.5rem)]'>Home</Link>
+            <Link href='/' className='text-2xl font-medium text-neutral-700 dark:text-neutral-400 block ml-5 mt-1 w-[calc(100%-2.5rem)]'>Home</Link>
             <div className='w-[calc(100%-2.5rem)] h-px bg-zinc-700 ml-5 mt-3'></div>
             <Link href='/portfolio' className='text-2xl font-medium text-neutral-700 dark:text-neutral-400 block ml-5 mt-3 w-[calc(100%-2.5rem)]'>Portfolio</Link>
             <div className='w-[calc(100%-2.5rem)] h-px bg-zinc-700 ml-5 mt-3'></div>
