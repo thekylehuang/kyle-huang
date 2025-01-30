@@ -7,6 +7,7 @@ import { motion } from "framer-motion"
 
 export function ModeToggle() {
   const [mounted, setMounted] = useState(false)
+  const [isUserInteracted, setIsUserInteracted] = useState(false)
   const { resolvedTheme, setTheme } = useTheme()
 
   useEffect(() => {
@@ -17,12 +18,17 @@ export function ModeToggle() {
 
   const isDark = resolvedTheme === "dark"
 
+  const handleToggle = () => {
+    setIsUserInteracted(true)
+    setTheme(isDark ? "light" : "dark")
+  }
+
   return (
     <label className="relative inline-flex items-center cursor-pointer">
       <input
         type="checkbox"
         checked={isDark}
-        onChange={() => setTheme(isDark ? "light" : "dark")}
+        onChange={handleToggle}
         className="sr-only peer"
       />
       <motion.div
@@ -32,22 +38,34 @@ export function ModeToggle() {
       >
         <motion.div
           initial={false}
-          animate={{ opacity: isDark ? 1 : 0, scale: isDark ? 1 : 0.8 }}
-          transition={{ duration: 0.2 }}
+          animate={{
+            opacity: isDark ? 1 : 0,
+            scale: isDark ? 1 : 0.8
+          }}
+          transition={{ duration: 0.2, ease: "easeOut" }}
           className="absolute left-2"
         >
           <Sun size={18} className="text-neutral-950 dark:text-zinc-50" />
         </motion.div>
         <motion.div
           layout
-          transition={{ type: "spring", stiffness: 250, damping: 20 }}
+          transition={{
+            type: "spring",
+            stiffness: 250,
+            damping: 20
+          }}
           className="w-5 h-5 bg-neutral-950 dark:bg-zinc-50 rounded-full"
-          animate={{ x: isDark ? 32 : -2 }}
+          animate={{
+            x: isUserInteracted ? (isDark ? 32 : -2) : 0
+          }}
         />
         <motion.div
-          initial={false} 
-          animate={{ opacity: isDark ? 0 : 1, scale: isDark ? 0.8 : 1 }}
-          transition={{ duration: 0.2 }}
+          initial={false}
+          animate={{
+            opacity: isDark ? 0 : 1,
+            scale: isDark ? 0.8 : 1
+          }}
+          transition={{ duration: 0.2, ease: "easeOut" }}
           className="absolute right-2"
         >
           <Moon size={18} className="text-neutral-950 dark:text-zinc-50" />
