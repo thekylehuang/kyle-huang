@@ -55,9 +55,8 @@ export function ModeToggle() {
             damping: 20
           }}
           className="w-5 h-5 bg-neutral-950 dark:bg-zinc-50 rounded-full"
-          animate={{
-            x: isUserInteracted ? (isDark ? 32 : -2) : 0
-          }}
+          animate={{x: isUserInteracted ? (isDark ? 32 : -2) : 0}}
+          initial={{x: isDark ? 32 : -2 }}
         />
         <motion.div
           initial={false}
