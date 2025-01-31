@@ -41,7 +41,7 @@ export function ModeToggle() {
             scale: isDark ? 1 : 0.8
           }}
           transition={{ duration: 0.2, ease: "easeOut" }}
-          className="absolute left-1"
+          className="absolute left-2"
         >
           <Sun size={18} className="text-neutral-950 dark:text-zinc-50" />
         </motion.div>
@@ -63,7 +63,7 @@ export function ModeToggle() {
             scale: isDark ? 0.8 : 1
           }}
           transition={{ duration: 0.2, ease: "easeOut" }}
-          className="absolute right-1"
+          className="absolute right-2"
         >
           <Moon size={18} className="text-neutral-950 dark:text-zinc-50" />
         </motion.div>
