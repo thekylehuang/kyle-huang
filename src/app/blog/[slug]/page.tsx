@@ -40,7 +40,6 @@ const BlogPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
     console.error("Error fetching post:", error?.message);
     return <div className="text-center mt-32">Post not found.</div>;
   }
-  await supabase.from("posts").update({ views: post.views + 1 }).eq("slug", slug);
   return <BlogPageComponent post={post} />;
 };
 
