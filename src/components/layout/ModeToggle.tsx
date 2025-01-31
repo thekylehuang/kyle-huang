@@ -7,10 +7,9 @@ import { motion } from "framer-motion"
 
 export function ModeToggle() {
   const [mounted, setMounted] = useState(false)
-  const [isUserInteracted, setIsUserInteracted] = useState(false)
   const { resolvedTheme, setTheme } = useTheme()
 
-  useEffect(() => {
+  useEffect(() => { 
     setMounted(true)
   }, [])
 
@@ -19,7 +18,6 @@ export function ModeToggle() {
   const isDark = resolvedTheme === "dark"
 
   const handleToggle = () => {
-    setIsUserInteracted(true)
     setTheme(isDark ? "light" : "dark")
   }
 
@@ -43,20 +41,20 @@ export function ModeToggle() {
             scale: isDark ? 1 : 0.8
           }}
           transition={{ duration: 0.2, ease: "easeOut" }}
-          className="absolute left-2"
+          className="absolute left-1"
         >
           <Sun size={18} className="text-neutral-950 dark:text-zinc-50" />
         </motion.div>
         <motion.div
           layout
+          initial={{ x: isDark ? 32 : -2 }}
           transition={{
             type: "spring",
             stiffness: 250,
             damping: 20
           }}
           className="w-5 h-5 bg-neutral-950 dark:bg-zinc-50 rounded-full"
-          animate={{x: isUserInteracted ? (isDark ? 32 : -2) : 0}}
-          initial={{x: isDark ? 32 : -2 }}
+          animate={{x: isDark ? 32 : -2 }}
         />
         <motion.div
           initial={false}
@@ -65,7 +63,7 @@ export function ModeToggle() {
             scale: isDark ? 0.8 : 1
           }}
           transition={{ duration: 0.2, ease: "easeOut" }}
-          className="absolute right-2"
+          className="absolute right-1"
         >
           <Moon size={18} className="text-neutral-950 dark:text-zinc-50" />
         </motion.div>
