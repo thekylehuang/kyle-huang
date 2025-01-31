@@ -32,7 +32,7 @@ export function ModeToggle() {
       <motion.div
         layout
         initial={false}
-        className="w-16 h-7 bg-zinc-50 peer-checked:bg-neutral-950 rounded-full flex items-center px-1.5 transition-colors relative border border-neutral-950 dark:border-zinc-50"
+        className="w-16 h-7 bg-zinc-50 peer-checked:bg-neutral-950 rounded-full flex items-center px-1.5 transition-colors relative border border-zinc-700 dark:border-zinc-500"
       >
         <motion.div
           initial={false}
