@@ -47,11 +47,11 @@ const ContactForm = () => {
       <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl mt-14 mb-14">Contact Me</h1>
       <form onSubmit={handleSubmit}>
         <Label htmlFor="email">Email</Label>
-        <Input type="email" id="email" placeholder="email@example.com" className="mb-4" onChange={(e) => setEmail(e.target.value)} />
+        <Input type="email" id="email" placeholder="email@example.com" className="mb-4" onChange={(e) => setEmail(e.target.value)} required />
         <Label htmlFor="name">Name</Label>
-        <Input type="text" id="name" placeholder="John Doe" className="mb-4" onChange={(e) => setName(e.target.value)} />
+        <Input type="text" id="name" placeholder="John Doe" className="mb-4" onChange={(e) => setName(e.target.value)} required />
         <Label htmlFor="message">Message</Label>
-        <Textarea placeholder="Type your message here." id="message" className="mb-4" onChange={(e) => setMessage(e.target.value)} />
+        <Textarea placeholder="Type your message here." id="message" className="mb-4" onChange={(e) => setMessage(e.target.value)} required />
         <Button type="submit" disabled={!message.trim()}>{ isSent ? 'Sent' : 'Send Message' }</Button>
       </form>
     </div>
