@@ -11,6 +11,7 @@ const ContactForm = () => {
   const [name, setName] = useState<string>('');
   const [email, setEmail] = useState<string>('');
   const [message, setMessage] = useState<string>('');
+  const [isSent, setIsSent] = useState<boolean>(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -21,6 +22,9 @@ const ContactForm = () => {
       message: message,
     };
 
+    if (message.trim() === '') {
+      return;
+    }
     try {
       const response = await emailjs.send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
@@ -29,6 +33,7 @@ const ContactForm = () => {
         process.env.NEXT_PUBLIC_EMAILJS_USER_ID!
       );
       console.log("Message sent successfully:", response);
+      setIsSent(true);
       setName('');
       setEmail('');
       setMessage('');
@@ -47,7 +52,7 @@ const ContactForm = () => {
         <Input type="text" id="name" placeholder="John Doe" className="mb-4" onChange={(e) => setName(e.target.value)} />
         <Label htmlFor="message">Message</Label>
         <Textarea placeholder="Type your message here." id="message" className="mb-4" onChange={(e) => setMessage(e.target.value)} />
-        <Button type="submit">Send Message</Button>
+        <Button type="submit" disabled={!message.trim()}>{ isSent ? 'Sent' : 'Send Message' }</Button>
       </form>
     </div>
   );
