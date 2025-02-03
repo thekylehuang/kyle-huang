@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from 'motion/react'
 import { useState } from 'react'
 
 const geist = Geist({
-  subsets: ['latin'],
+  subsets: ['latin']
 })
 
 const Navbar = () => {
