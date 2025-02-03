@@ -9,7 +9,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <>
       <html lang="en" suppressHydrationWarning>
-        <body className="antialiased bg-zinc-50 dark:bg-neutral-950 flex flex-col">
+        <body className="antialiased dark:bg-neutral-950 flex flex-col gap-0">
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
             <Navbar />
             {children}

@@ -20,7 +20,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className={`${geist.className} fixed left-0 top-0 flex items-center w-full h-14 border-b border-zinc-700 z-50 bg-zinc-50 dark:bg-neutral-950`}>
+      <nav className={`${geist.className} fixed left-0 top-0 flex items-center w-full h-14 border-b border-zinc-700 z-50 bg-zinc-50 dark:bg-neutral-950 mb-0`}>
         <div className='flex items-center justify-center h-14 px-4 md:px-3 lg:px-6 border-r border-zinc-700 z-0'>
           <button onClick={toggleBottomSheet}><Menu size={20} className='inline md:hidden'/></button>
           <Link href='/' className='text-neutral-950 dark:text-zinc-50 text-base font-bold'><Command size={24} className='hidden md:inline-block md:mr-0 lg:mr-2 align-middle -mt-2px' /><span className='hidden md:hidden lg:inline'>Kyle Huang</span></Link>
