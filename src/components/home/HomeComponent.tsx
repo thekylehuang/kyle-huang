@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Preloader from "@/components/layout/Preloader";
 import { AnimatePresence } from "motion/react";
 import { Geist } from "next/font/google";
+import Lenis from "lenis";
 import MarqueeComponent from "./Marquee";
 
 const geist = Geist({
@@ -12,6 +13,16 @@ const geist = Geist({
 
 const HomeComponent = () => {
   const [isLoading, setIsLoading] = useState(true);
+  useEffect(
+    () => {
+      const lenis = new Lenis();
+      function raf(time: number) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+      requestAnimationFrame(raf);
+    },[]
+  )
   useEffect(
     () => {
       document.body.style.overflow = isLoading ? "hidden" : "unset"
