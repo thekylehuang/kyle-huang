@@ -46,7 +46,7 @@ const HomeComponent = () => {
           }
         </AnimatePresence>
         <div className='h-[600px] sm:h-[800px] w-full bg-zinc-50 dark:bg-neutral-950'>
-          <h1 className={`${geist.className} font-black text-7xl xs:text-9xl sm:text-10xl md:text-11xl lg:text-11xl px-0 lg:px-24 absolute top-24 left-0 right-0 m-auto text-center`}>KYLE HUANG</h1>
+          <h1 className={`${geist.className} font-black text-7xl xs:text-9xl sm:text-10xl md:text-11xl lg:text-11xl px-0 lg:px-24 absolute top-24 left-0 right-0 m-auto text-center`}>KYLE<br />HUANG</h1>
         </div>
         <MarqueeComponent />
         <div className='h-[800px] w-full bg-zinc-50 dark:bg-neutral-950'>
