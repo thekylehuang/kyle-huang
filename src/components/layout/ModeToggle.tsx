@@ -6,6 +6,7 @@ import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 
 export function ModeToggle() {
+  const layoutId = 'mode-toggle'
   const [mounted, setMounted] = useState(false)
   const { resolvedTheme, setTheme } = useTheme()
 
@@ -32,6 +33,7 @@ export function ModeToggle() {
       <motion.div
         layout
         initial={false}
+        layoutId={layoutId}
         className="w-16 h-7 bg-zinc-50 peer-checked:bg-neutral-950 rounded-full flex items-center px-1.5 transition-colors relative border border-zinc-700 dark:border-zinc-500"
       >
         <motion.div
@@ -54,7 +56,7 @@ export function ModeToggle() {
             damping: 20
           }}
           className="w-5 h-5 bg-neutral-950 dark:bg-zinc-50 rounded-full"
-          animate={{x: isDark ? 30 : 0 }}
+          animate={{ x: isDark ? 30 : 0 }}
         />
         <motion.div
           initial={false}
