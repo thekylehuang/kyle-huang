@@ -42,6 +42,6 @@ export default {
 			}
   	}
   },
-  plugins: [animate],
+  plugins: [animate,],
   darkMode: 'class',
 } satisfies Config;

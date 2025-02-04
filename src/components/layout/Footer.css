@@ -1,0 +1,10 @@
+.mask-image-y {
+  mask-image: linear-gradient(to bottom,
+  rgba(0, 0, 0, 0) 10%,
+  rgba(0, 0, 0, 1) 50%,
+  rgba(0, 0, 0, 0) 90%);
+-webkit-mask-image: linear-gradient(to bottom,
+  rgba(0, 0, 0, 0) 10%,
+  rgba(0, 0, 0, 1) 50%,
+  rgba(0, 0, 0, 0) 90%);
+}
