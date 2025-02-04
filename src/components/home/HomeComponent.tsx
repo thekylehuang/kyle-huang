@@ -13,16 +13,17 @@ const geist = Geist({
 
 const HomeComponent = () => {
   const [isLoading, setIsLoading] = useState(true);
-  useEffect(
-    () => {
-      const lenis = new Lenis();
-      function raf(time: number) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-      }
+  useEffect(() => {
+    const lenis = new Lenis();
+    function raf(time: number) {
+      lenis.raf(time);
       requestAnimationFrame(raf);
-    },[]
-  )
+    }
+    requestAnimationFrame(raf);
+    return () => {
+      lenis.destroy(); 
+    };
+  }, []);
   useEffect(
     () => {
       document.body.style.overflow = isLoading ? "hidden" : "unset"
