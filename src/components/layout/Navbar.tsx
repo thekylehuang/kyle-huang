@@ -33,7 +33,7 @@ const Navbar = () => {
           <Link href='/shop' className='text-sm text-neutral-700 dark:text-neutral-400 ml-px font-semibold py-2 lg:px-4 px-3 rounded-lg hover:bg-zinc-200 dark:hover:bg-zinc-900 transition-colors'>Shop</Link>
           <Link href='/contact' className='text-sm text-neutral-700 dark:text-neutral-400 ml-px font-semibold py-2 lg:px-4 px-3 rounded-lg hover:bg-zinc-200 dark:hover:bg-zinc-900 transition-colors'>Contact</Link>
         </div>
-        <div className='fixed right-0 h-14 border-l border-zinc-700 lg:px-6 px-4 flex items-center justify-center z-0'>
+        <div className='fixed right-0 h-14 border-l border-zinc-700 z-0 w-24'>
           <ModeToggle />
         </div>
         <AnimatePresence>
