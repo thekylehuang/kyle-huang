@@ -29,6 +29,7 @@ export default {
 				'100': '100',
 			},
 			fontSize: {
+				'7.5xl': '5.4rem',
 				'10xl': '10rem',
 				'11xl': '12rem',
 			},
@@ -39,7 +40,7 @@ export default {
 				'lg': '64rem',
 				'xl': '80rem',
 				'2xl': '96rem',
-			}
+			},
   	}
   },
   plugins: [animate,],
