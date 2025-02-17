@@ -33,8 +33,8 @@ const Footer = () => {
             <Link href='#' className={`${geist.className} text-xl hover:underline`}>Linkedin</Link>
             <Link href='https://www.instagram.com/thekylehuang/' className={`${geist.className} text-xl hover:underline`}>Instagram</Link>
             <Link href='https://github.com/thekylehuang' className={`${geist.className} text-xl hover:underline`}>Github</Link>
-            <Link href='' className={`${geist.className} text-xl hover:underline`}>Email</Link>
-            <Link href='#' className={`${geist.className} text-xl hover:underline`}>Facebook</Link>
+            <Link href='#' className={`${geist.className} text-xl hover:underline`}>Email</Link>
+            <Link href='https://www.facebook.com/profile.php?id=61572459315535' className={`${geist.className} text-xl hover:underline`}>Facebook</Link>
           </div>
         </div>
       </div>

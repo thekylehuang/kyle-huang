@@ -43,7 +43,7 @@ const ContactForm = () => {
   };
 
   return(
-    <div className="mt-14 mx-auto mb-24 w-11/12 max-w-[500px]">
+    <div className="mt-14 mx-auto mb-24 w-11/12 max-w-[500px] min-h-[890px]">
       <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl mt-14 mb-14">Contact Me</h1>
       <form onSubmit={handleSubmit}>
         <Label htmlFor="email">Email</Label>
