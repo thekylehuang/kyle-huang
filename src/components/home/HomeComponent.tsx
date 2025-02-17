@@ -59,7 +59,7 @@ const HomeComponent = () => {
           <motion.h1 className={`${geist.className} font-black leading-tight text-7.5xl xs:text-9xl sm:text-10xl md:text-11xl lg:text-11xl px-0 lg:px-24 absolute top-24 left-0 right-0 m-auto text-center z-0`}
           style={{ y: backgroundY}}>KYLE<br />HUANG</motion.h1>
           <motion.div style={{ y: foregroundY }} className="bg-blue-500 absolute bottom-0 left-1/2 transform -translate-x-1/2">
-            <Image src='/images/Gong Yoo.png' width={1770} height={1740} alt="Literally me" 
+            <Image src='/images/home/Gong Yoo.png' width={1770} height={1740} alt="Literally me" 
             className="absolute max-w-96 xs:max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl bottom-0 left-1/2 transform -translate-x-1/2 object-cover z-10"/>
           </motion.div>
         </div>
