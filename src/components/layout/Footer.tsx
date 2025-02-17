@@ -29,11 +29,11 @@ const Footer = () => {
           <div className='h-full w-px bg-neutral-950 dark:bg-zinc-50 mask-image-y hidden sm:inline'></div>
           <div className='w-full h-px bg-neutral-950 dark:bg-zinc-50 mask-image-x inline sm:hidden'></div>
           <div className='grid grid-cols-2 gap-1 p-4 justify-items-center'>
-            <Link href='#' className={`${geist.className} text-xl hover:underline`}>Youtube</Link>
+            <Link href='https://www.youtube.com/@the-kyle-huang' className={`${geist.className} text-xl hover:underline`}>Youtube</Link>
             <Link href='#' className={`${geist.className} text-xl hover:underline`}>Linkedin</Link>
-            <Link href='#' className={`${geist.className} text-xl hover:underline`}>Instagram</Link>
-            <Link href='#' className={`${geist.className} text-xl hover:underline`}>Github</Link>
-            <Link href='#' className={`${geist.className} text-xl hover:underline`}>Email</Link>
+            <Link href='https://www.instagram.com/thekylehuang/' className={`${geist.className} text-xl hover:underline`}>Instagram</Link>
+            <Link href='https://github.com/thekylehuang' className={`${geist.className} text-xl hover:underline`}>Github</Link>
+            <Link href='' className={`${geist.className} text-xl hover:underline`}>Email</Link>
             <Link href='#' className={`${geist.className} text-xl hover:underline`}>Facebook</Link>
           </div>
         </div>
