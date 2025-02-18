@@ -44,8 +44,8 @@ const HomeComponent = () => {
     target: ref,
     offset: ["start start", "end start"],
   })
-  const backgroundY = useTransform(scrollYProgress, [0,1], ["0%", "100%"]);
-  const foregroundY = useTransform(scrollYProgress, [0,1], ["0%", "20%"]);
+  const backgroundY = useTransform(scrollYProgress, [0,1], ["0%", "80%"]);
+  const foregroundY = useTransform(scrollYProgress, [0,1], ["0%", "40%"]);
 
   return(
     <>
