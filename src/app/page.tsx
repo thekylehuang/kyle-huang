@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 
 const Home = () => {
   return(
-    <HomeComponent />
+      <HomeComponent />
   );
 }
 

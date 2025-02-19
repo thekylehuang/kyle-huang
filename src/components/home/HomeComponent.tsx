@@ -55,7 +55,7 @@ const HomeComponent = () => {
             <Preloader />
           }
         </AnimatePresence>
-        <div className='h-[calc(100vh-55px)] w-full bg-zinc-50 dark:bg-neutral-950 relative overflow-x-hidden' ref={ref}>
+        <div className='h-[120vh] w-full bg-zinc-50 dark:bg-neutral-950 relative overflow-hidden' ref={ref}>
           <motion.h1 className={`${geist.className} font-black leading-tight text-[35vw] sm:text-[clamp(1rem,30vw,700px)] absolute top-0 left-0 right-0 m-auto text-center z-0`}
           style={{ y: backgroundY}}>KYLE</motion.h1>
           <motion.div style={{ y: foregroundY }} className="z-10 absolute bottom-0 h-5/6 w-full">
