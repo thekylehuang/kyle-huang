@@ -56,7 +56,7 @@ const BlogList = () => {
   }, []);
 
   return (
-    <main className="flex justify-center mt-14 min-h-[1200px]">
+    <main className="flex justify-center mt-14 min-h-screen">
       <div className="max-w-3xl w-11/12 mt-14">
         <h1 className={`${geist.className} scroll-m-20 font-extrabold tracking-tight text-5xl text-neutral-950 dark:text-zinc-50 ml-3`}>Blogs</h1>
         <div className='mt-12 lg:mt-36'>
