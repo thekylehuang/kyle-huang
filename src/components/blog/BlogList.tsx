@@ -25,7 +25,7 @@ const formatDate = (timestamp: string) => {
 
 const BlogCard = ({ post }: { post: Post }) => {
   return (
-      <Link href={`/blog/${post.slug}`}>
+      <Link href={`/blog/${post.slug}`} scroll={false} >
         <div className='mt-4 hover:bg-zinc-200 hover:dark:bg-zinc-900 p-4 rounded-lg transition-colors'>
           <h2 className={`${geist.className} text-neutral-950 dark:text-zinc-50 scroll-m-20 text-3xl font-semibold tracking-tight`}>{post.title}</h2>
           <p className={`${merriweather.className} text-neutral-950 dark:text-zinc-50 font-normal mt-4`}>{post.content.substring(0, 195)}...</p>
@@ -37,7 +37,9 @@ const BlogCard = ({ post }: { post: Post }) => {
 
 const BlogList = () => {
   const [posts, setPosts] = useState<Post[]>([]);
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
   useEffect(() => {
     const fetchPosts = async () => {
       const { data, error } = await supabase.from("posts").select("id, title, slug, content, created_at").order("id", { ascending: false });
