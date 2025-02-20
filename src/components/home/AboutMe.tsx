@@ -15,8 +15,8 @@ const geistmono = Geist_Mono({
 // About Me Content
 const aboutMeIntroduction = `I'm Kyle Huang—a creator, developer, pianist, athlete, and economist. ✨`;
 const aboutMeBody1 = `Through a large variety of experiences, I've gained a diverse set of skills. If you'd like to read some of my thoughts, you can check my blog, where I write articles and short stories. 📝`;
-const aboutMeBody2 = `I find economics incredibly interesting, and it's what I've decided to specialize in. All of the skills I've mastered through the years support my endeavors in economics.`;
-const aboutMeBody3 = `One of my most useful skills is web development. I enjoy the process of planning, designing, and building visual experiences. I've worked with the following technologies: `;
+const aboutMeBody2 = `I find economics interesting, and I'm currently studying the textbook "Principles of Economics". The book provides me with thought-provoking information and helps me learn quickly. 📖`;
+const aboutMeBody3 = `One of my favorite hobbies is web development. I enjoy the process of planning, designing, and building visual experiences. I've worked with the following technologies: `;
 
 const AboutMe = ({isLight} : {isLight : boolean}) => {
   // Opacity Animation
