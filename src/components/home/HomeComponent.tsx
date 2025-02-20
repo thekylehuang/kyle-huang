@@ -4,11 +4,12 @@ import { useState, useEffect, useRef } from "react";
 import Lenis from "lenis";
 import { AnimatePresence, useScroll, useTransform, motion } from "motion/react";
 import { Geist } from "next/font/google";
+import { useTheme } from "next-themes";
 import Image from "next/image";
 import Preloader from "@/components/layout/Preloader";
 import MarqueeComponent from "./Marquee";
 import AboutMe from "./AboutMe";
-import { useTheme } from "next-themes";
+import Achievements from "./Achievements";
 
 const geist = Geist({
   subsets: ['latin']
@@ -76,6 +77,7 @@ const HomeComponent = () => {
         </div>
         <MarqueeComponent />
         <AboutMe isLight={isLight}/>
+        <Achievements />
       </main>
     </>
   );

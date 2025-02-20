@@ -26,11 +26,9 @@ const Navbar = () => {
           <Link href='/' className='text-neutral-950 dark:text-zinc-50 text-base font-bold'><Command size={24} className='hidden md:inline-block md:mr-0 lg:mr-2 align-middle -mt-2px' /><span className='hidden md:hidden lg:inline'>Kyle Huang</span></Link>
         </div>
         <div className='hidden md:inline-block z-0'>
-          <Link href='/portfolio' className='text-sm text-neutral-700 dark:text-neutral-400 lg:ml-4 ml-1 font-semibold py-2 lg:px-4 px-3 rounded-lg hover:bg-zinc-200 dark:hover:bg-zinc-900 transition-colors'>Portfolio</Link>
-          <Link href='/blog' className='text-sm text-neutral-700 dark:text-neutral-400 ml-px font-semibold py-2 lg:px-4 px-3 rounded-lg hover:bg-zinc-200 dark:hover:bg-zinc-900 transition-colors'>Blog</Link>
-          <Link href='/projects' className='text-sm text-neutral-700 dark:text-neutral-400 ml-px font-semibold py-2 lg:px-4 px-3 rounded-lg hover:bg-zinc-200 dark:hover:bg-zinc-900 transition-colors'>Projects</Link>
+          <Link href='/blog' className='text-sm text-neutral-700 dark:text-neutral-400 lg:ml-4 ml-1 font-semibold py-2 lg:px-4 px-3 rounded-lg hover:bg-zinc-200 dark:hover:bg-zinc-900 transition-colors'>Blog</Link>
+          <Link href='/cv' className='text-sm text-neutral-700 dark:text-neutral-400 ml-px font-semibold py-2 lg:px-4 px-3 rounded-lg hover:bg-zinc-200 dark:hover:bg-zinc-900 transition-colors'>CV</Link>
           <Link href='/resources' className='text-sm text-neutral-700 dark:text-neutral-400 ml-px font-semibold py-2 lg:px-4 px-3 rounded-lg hover:bg-zinc-200 dark:hover:bg-zinc-900 transition-colors'>Resources</Link>
-          <Link href='/shop' className='text-sm text-neutral-700 dark:text-neutral-400 ml-px font-semibold py-2 lg:px-4 px-3 rounded-lg hover:bg-zinc-200 dark:hover:bg-zinc-900 transition-colors'>Shop</Link>
           <Link href='/contact' className='text-sm text-neutral-700 dark:text-neutral-400 ml-px font-semibold py-2 lg:px-4 px-3 rounded-lg hover:bg-zinc-200 dark:hover:bg-zinc-900 transition-colors'>Contact</Link>
         </div>
         <div className='fixed right-0 h-14 border-l border-zinc-700 z-0 w-24'>
@@ -57,15 +55,11 @@ const Navbar = () => {
           <div className='overflow-y-auto h-full absolute top-2 w-full'>
             <Link href='/' className='text-2xl font-medium text-neutral-700 dark:text-neutral-400 block ml-5 mt-1 w-[calc(100%-2.5rem)]'>Home</Link>
             <div className='w-[calc(100%-2.5rem)] h-px bg-zinc-700 ml-5 mt-3'></div>
-            <Link href='/portfolio' className='text-2xl font-medium text-neutral-700 dark:text-neutral-400 block ml-5 mt-3 w-[calc(100%-2.5rem)]'>Portfolio</Link>
-            <div className='w-[calc(100%-2.5rem)] h-px bg-zinc-700 ml-5 mt-3'></div>
             <Link href='/blog' className='text-2xl font-medium text-neutral-700 dark:text-neutral-400 block ml-5 mt-3 w-[calc(100%-2.5rem)]'>Blog</Link>
             <div className='w-[calc(100%-2.5rem)] h-px bg-zinc-700 ml-5 mt-3'></div>
-            <Link href='/projects' className='text-2xl font-medium text-neutral-700 dark:text-neutral-400 block ml-5 mt-3 w-[calc(100%-2.5rem)]'>Projects</Link>
+            <Link href='/cv' className='text-2xl font-medium text-neutral-700 dark:text-neutral-400 block ml-5 mt-3 w-[calc(100%-2.5rem)]'>CV</Link>
             <div className='w-[calc(100%-2.5rem)] h-px bg-zinc-700 ml-5 mt-3'></div>
             <Link href='/resourcs' className='text-2xl font-medium text-neutral-700 dark:text-neutral-400 block ml-5 mt-3 w-[calc(100%-2.5rem)]'>Resources</Link>
-            <div className='w-[calc(100%-2.5rem)] h-px bg-zinc-700 ml-5 mt-3'></div>
-            <Link href='/shop' className='text-2xl font-medium text-neutral-700 dark:text-neutral-400 block ml-5 mt-3 w-[calc(100%-2.5rem)]'>Shop</Link>
             <div className='w-[calc(100%-2.5rem)] h-px bg-zinc-700 ml-5 mt-3'></div>
             <Link href='/contact' className='text-2xl font-medium text-neutral-700 dark:text-neutral-400 block ml-5 mt-3 w-[calc(100%-2.5rem)]'>Contact</Link>
           </div>

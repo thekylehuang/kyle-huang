@@ -25,7 +25,7 @@ const AboutMe = ({isLight} : {isLight : boolean}) => {
     target: element, offset: ['0.9 end', 'start 0.5' ]
   })
   return(
-    <div className={`${geist.className} w-full bg-zinc-50 dark:bg-neutral-950`}>
+    <div className={`${geist.className} w-full bg-zinc-50 dark:bg-neutral-950 border-b border-b-zinc-700`}>
       <div className="h-full mx-auto w-5/6 max-w-4xl text-neutral-950 dark:text-zinc-50 py-24">
         <h1 className={`${geistmono.className} text-xl font-extrabold mb-8`}>About</h1>
         <Paragraph text={aboutMeIntroduction} />
