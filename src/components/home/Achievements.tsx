@@ -13,7 +13,6 @@ const geist = Geist({
   subsets: ['latin']
 })
 
-const Introduction = `I push to excel in every field I pursue, which has led to several notable milestones. Whether it's economics, mathematics, content creation, or piano, I challenge myself and continuously improve. Here are a few highlights of my qualifications. 🏆`;
 const Achievement1 = `In the 2025 AMC 8 (American Mathematics Competition 8), I qualified for honor roll, placing me in the top 5% of competitors.`
 
 const Achievements = () => {
@@ -25,7 +24,6 @@ const Achievements = () => {
     <div className={`${geist.className} w-full bg-zinc-50 dark:bg-neutral-950`}>
       <div className="h-full mx-auto w-5/6 max-w-4xl text-neutral-950 dark:text-zinc-50 py-24">
         <h1 className={`${geistmono.className} text-xl font-extrabold mb-8`}>Achievements</h1>
-        <Paragraph text={Introduction} />
         <Paragraph text={Achievement1} />
       </div>
     </div>

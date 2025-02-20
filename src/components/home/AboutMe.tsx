@@ -22,7 +22,7 @@ const AboutMe = ({isLight} : {isLight : boolean}) => {
   // Opacity Animation
   const element = useRef(null);
   const { scrollYProgress } = useScroll({
-    target: element, offset: ['0.9 end', 'start 0.5' ]
+    target: element, offset: ['0.9 end', 'start 0.4' ]
   })
   return(
     <div className={`${geist.className} w-full bg-zinc-50 dark:bg-neutral-950 border-b border-b-zinc-700`}>

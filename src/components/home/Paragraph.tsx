@@ -12,10 +12,10 @@ const librebaskerville = Libre_Baskerville({
 const Paragraph = ({text}: {text: string}) => {
   const element = useRef(null);
   const { scrollYProgress } = useScroll({
-    target: element, offset: ['0.9 end', 'start 0.25' ]
+    target: element, offset: ['0.9 end', 'start 0.4' ]
   })
   return(
-    <motion.p className={`${librebaskerville.className} mt-8 mb-8 text-3xl font-regular flex flex-wrap`} 
+    <motion.p className={`${librebaskerville.className} mt-8 mb-8 text-2xl sm:text-3xl font-regular flex flex-wrap`} 
     ref={element}
     style={{ opacity: scrollYProgress }}>
       {text}
