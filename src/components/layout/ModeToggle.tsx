@@ -34,6 +34,7 @@ export function ModeToggle() {
         layout
         initial={false}
         layoutId={layoutId}
+        transition={{duration: 0}}
         className="w-16 h-7 bg-zinc-50 peer-checked:bg-neutral-950 rounded-full flex items-center px-1.5 transition-colors border border-zinc-700 dark:border-zinc-500 fixed right-4 top-3"
       >
         <motion.div
