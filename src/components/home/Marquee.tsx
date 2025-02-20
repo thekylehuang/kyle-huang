@@ -8,11 +8,13 @@ const MarqueeComponent = () => {
       <span className="mx-4">•</span>
       <span className="mx-4">Creator</span>
       <span className="mx-4">•</span>
+      <span className="mx-4">Developer</span>
+      <span className="mx-4">•</span>
       <span className="mx-4">Pianist</span>
       <span className="mx-4">•</span>
-      <span className="mx-4">Economist</span>
+      <span className="mx-4">Athlete</span>
       <span className="mx-4">•</span>
-      <span className="mx-4">Developer</span>
+      <span className="mx-4">Economist</span>
       <span className="mx-4">•</span>
     </Marquee>
   );

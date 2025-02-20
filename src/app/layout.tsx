@@ -4,6 +4,7 @@ import Footer from "@/components/layout/Footer"
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { ThemeProvider } from '@/components/layout/theme-provider'
 import { Analytics } from "@vercel/analytics/react"
+import React from "react"
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
