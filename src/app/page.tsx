@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import HomeComponent from '@/components/home/HomeComponent';
+import HomePage from '@/components/home/HomePage';
 
 export const metadata: Metadata = {
   title: 'Kyle Huang | Creator & Polymath',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 
 const Home = () => {
   return(
-      <HomeComponent />
+      <HomePage />
   );
 }
 

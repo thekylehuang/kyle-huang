@@ -15,7 +15,7 @@ const geist = Geist({
   subsets: ['latin']
 })
 
-const HomeComponent = () => {
+const HomePage = () => {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(
     () => {
@@ -88,4 +88,4 @@ const HomeComponent = () => {
   );
 }
 
-export default HomeComponent;
+export default HomePage;
