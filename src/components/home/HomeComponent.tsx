@@ -16,25 +16,30 @@ const geist = Geist({
 })
 
 const HomeComponent = () => {
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(
+    () => {
+      if (isLoading) {
+        document.body.style.overflow = "hidden";
+        document.documentElement.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "unset";
+        document.documentElement.style.overflow = "unset";
+      }
+    },[isLoading] 
+  )
   // Lenis Setup
   useEffect(() => {
     const lenis = new Lenis();
     function raf(time: number) {
-      lenis.raf(time);
+      if (!isLoading) lenis.raf(time);
       requestAnimationFrame(raf);
     }
     requestAnimationFrame(raf);
     return () => {
       lenis.destroy(); 
     };
-  }, []);
-  // Preloader
-  const [isLoading, setIsLoading] = useState(true);
-  useEffect(
-    () => {
-      document.body.style.overflow = isLoading ? "hidden" : "unset"
-    },[isLoading] 
-  )
+  }, [isLoading]);
   // Parallax on Hero
   const heroSectionRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -48,8 +53,8 @@ const HomeComponent = () => {
       setTimeout(() => {
         setIsLoading(false);
       }, 2000)
-      scrollTo(0,0);
-    },[]
+      window.scrollTo(0,0);
+    },[isLoading]
   )
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme } = useTheme();
