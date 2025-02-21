@@ -31,22 +31,22 @@ const Contact = () => {
         <motion.div className="flex gap-2" ref={element} style={{opacity: scrollYProgress}}>
           <a href="https://www.instagram.com/thekylehuang/">
             <div className="bg-zinc-200 p-2 rounded-xl border-2 border-zinc-600 dark:bg-neutral-800">
-              <Instagram size={32}/>
+              <Instagram size={32} strokeWidth={1.5}/>
             </div>
           </a>
           <a href="https://www.instagram.com/thekylehuang/">
             <div className="bg-zinc-200 p-2 rounded-xl border-2 border-zinc-600 dark:bg-neutral-800">
-              <Linkedin size={32}/>
+              <Linkedin size={32} strokeWidth={1.5}/>
             </div>
           </a>
           <a href="https://www.youtube.com/@the-kyle-huang">
             <div className="bg-zinc-200 p-2 rounded-xl border-2 border-zinc-600 dark:bg-neutral-800">
-              <Youtube size={32}/>
+              <Youtube size={32} strokeWidth={1.5}/>
             </div>
           </a>
           <a href="https://github.com/thekylehuang">
             <div className="bg-zinc-200 p-2 rounded-xl border-2 border-zinc-600 dark:bg-neutral-800">
-              <Github size={32}/>
+              <Github size={32} strokeWidth={1.5}/>
             </div>
           </a>
         </motion.div>

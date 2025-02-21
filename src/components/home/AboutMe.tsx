@@ -48,6 +48,9 @@ const AboutMe = ({isLight} : {isLight : boolean}) => {
         style={{ opacity : scrollYProgress }}>
           Icons by Skill Icons
         </motion.a>
+        <Paragraph>
+          Another one of my endeavors is learning languages. I&apos;d like to be trilingual before the end of high school. Currently, I am fluent in English and learning Mandarin and Korean. 🗣️
+        </Paragraph>
       </div>
     </div>
   );

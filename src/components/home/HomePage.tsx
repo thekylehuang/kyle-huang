@@ -10,6 +10,7 @@ import Preloader from "@/components/layout/Preloader";
 import MarqueeComponent from "./Marquee";
 import AboutMe from "./AboutMe";
 import Achievements from "./Achievements";
+import RecentBlogs from "./RecentBlogs";
 import Contact from "./Contact";
 
 const geist = Geist({
@@ -84,6 +85,7 @@ const HomePage = () => {
         <MarqueeComponent />
         <AboutMe isLight={isLight}/>
         <Achievements />
+        <RecentBlogs />
         <Contact />
       </main>
     </>
