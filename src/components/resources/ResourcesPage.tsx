@@ -1,10 +1,16 @@
+"use client"
+
 import { Geist } from "next/font/google";
+import { useEffect } from "react";
 
 const geist = Geist({
   subsets: ['latin']
 })
 
 const ResourcesPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
   return(
     <main className={`${geist.className} text-neutral-950 dark:text-zinc-50`}>
       <div className="w-full min-h-screen mt-14">
