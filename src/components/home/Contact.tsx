@@ -18,7 +18,7 @@ const Contact = () => {
   // Opacity Animation
   const element = useRef(null);
   const { scrollYProgress } = useScroll({
-    target: element, offset: ['0.9 end', 'start 0.4' ]
+    target: element, offset: ['0.9 end', 'start 0.6' ]
   })
   return(
     <div className={`${geist.className} w-full bg-zinc-50 dark:bg-neutral-950`}>
