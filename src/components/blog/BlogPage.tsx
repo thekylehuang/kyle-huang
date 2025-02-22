@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import { Geist } from "next/font/google"; 
 import './BlogPage.css'
@@ -13,6 +14,9 @@ interface Post {
 }
 
 const BlogPageComponent = ({ post }: { post: Post }) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
   return (
     <div className={`mt-32 ${geist.className} markdown-container mb-24`}>
       <div className="max-w-5xl mx-auto w-11/12">
