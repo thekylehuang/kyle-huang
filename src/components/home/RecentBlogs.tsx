@@ -2,10 +2,15 @@
 
 import supabase from "@/utils/supabase";
 import { useState, useEffect } from "react";
+import { ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
-import { Geist_Mono, Libre_Baskerville } from "next/font/google";
+import { Geist, Geist_Mono, Libre_Baskerville } from "next/font/google";
 import dayjs from 'dayjs'
 import Link from "next/link";
+
+const geist = Geist({
+  subsets: ['latin']
+})
 
 const geistmono = Geist_Mono({
   subsets: ['latin']
@@ -34,11 +39,11 @@ const BlogCard = ({ post, index }: { post: Post, index: number }) => {
       <Link href={`/blog/${post.slug}`} scroll={false} >
         <motion.div 
         className='mt-4 hover:bg-zinc-200 hover:dark:bg-zinc-800 p-4 rounded-lg transition-colors flex justify-between flex-col md:flex-row'
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }} 
         viewport={{ once: false }} 
         transition={{
-          delay: index * 0.1,
+          delay: index * 0.2,
           duration: 0.6,
           ease: 'easeOut',
         }}>
@@ -74,17 +79,18 @@ const RecentBlogs = () => {
               <BlogCard key={post.id} post={post} index={index} />
           ))}
         </div>
-        <Link href="/blog" className={`${geistmono.className} bg-zinc-50 dark:bg-neutral-900 underline text-md`}>
+        <Link href="/blog" className={`${geist.className}`}>
           <motion.p         
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }} 
           viewport={{ once: false }} 
           transition={{
-            delay: 0.1,
+            delay: 0.2,
             duration: 0.6,
             ease: 'easeOut',
-          }}>
-            View All →
+          }}
+          className="text-md font-medium text-neutral-600 dark:text-zinc-400 group inline">
+            View All <span><ArrowRight size={18} className="inline relative bottom-[2px] left-0 group-hover:left-2 transition-all"/></span>
           </motion.p>
         </Link>
       </div>
