@@ -19,8 +19,8 @@ const Achievements = () => {
     target: imageAnimate, offset: ['0.9 end', 'start 0.5' ]
   })*/}
   return(
-    <div className={`${geist.className} w-full bg-zinc-50 dark:bg-neutral-950 border-b border-b-zinc-700`}>
-      <div className="h-full mx-auto w-5/6 max-w-4xl text-neutral-950 dark:text-zinc-50 py-24">
+    <div className={`${geist.className} w-full bg-zinc-50 dark:bg-neutral-900 border-b border-b-zinc-700`}>
+      <div className="h-full mx-auto w-5/6 max-w-4xl text-neutral-900 dark:text-zinc-50 py-12">
         <h1 className={`${geistmono.className} text-xl font-extrabold mb-8`}>Achievements</h1>
         <Paragraph>
           In the 2025 AMC 8 (American Mathematics Competition 8), I qualified for honor roll, placing me in the top 5% of competitors.

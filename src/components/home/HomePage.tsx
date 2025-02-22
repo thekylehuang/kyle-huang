@@ -48,7 +48,7 @@ const HomePage = () => {
     target: heroSectionRef,
     offset: ["start start", "end start"],
   });
-  const backgroundY = useTransform(scrollYProgress, [0,1], ["0%", "150%"]);
+  const backgroundY = useTransform(scrollYProgress, [0,1], ["0%", "250%"]);
   const foregroundY = useTransform(scrollYProgress, [0,1], ["0%", "60%"]);
   useEffect(
     () => {
@@ -65,7 +65,6 @@ const HomePage = () => {
   }, []);
   const isLight = resolvedTheme === "light";
   if (!mounted) return null;
-
   return(
     <>
       <main className={`${geist.className} mt-14`}>
@@ -74,8 +73,8 @@ const HomePage = () => {
             <Preloader />
           }
         </AnimatePresence>
-        <div className='h-[120vh] w-full bg-zinc-50 dark:bg-neutral-950 relative overflow-hidden' ref={heroSectionRef}>
-          <motion.h1 className="font-black leading-tight text-[35vw] sm:text-[clamp(1rem,30vw,700px)] absolute top-0 left-0 right-0 m-auto text-center z-0"
+        <div className='h-[120vh] w-full dark:bg-neutral-950 relative overflow-hidden' ref={heroSectionRef}>
+          <motion.h1 className="font-black text-[35vw] sm:text-[clamp(1rem,30vw,700px)] absolute left-0 right-0 text-center z-0 text-black dark:text-zinc-50 leading-none top-[8vh]"
           style={{ y: backgroundY}}>KYLE</motion.h1>
           <motion.div style={{ y: foregroundY }} className="z-10 absolute bottom-0 h-5/6 w-full">
             <Image src='/images/home/Gong Yoo.png' width={3320} height={2940} alt="Literally me" 

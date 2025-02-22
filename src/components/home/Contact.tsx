@@ -22,8 +22,8 @@ const Contact = () => {
     target: element, offset: ['0.9 end', 'start 0.6' ]
   })
   return(
-    <div className={`${geist.className} w-full bg-zinc-50 dark:bg-neutral-950`}>
-      <div className="h-full mx-auto w-5/6 max-w-4xl text-neutral-950 dark:text-zinc-50 py-24">
+    <div className={`${geist.className} w-full bg-zinc-50 dark:bg-neutral-900`}>
+      <div className="h-full mx-auto w-5/6 max-w-4xl text-neutral-900 dark:text-zinc-50 py-12">
         <h1 className={`${geistmono.className} text-xl font-extrabold mb-8`}>Contact</h1>
         <Paragraph>
           You can reach me through my contact page or my social media.

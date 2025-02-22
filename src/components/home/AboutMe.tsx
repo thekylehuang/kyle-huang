@@ -19,14 +19,14 @@ const AboutMe = ({isLight} : {isLight : boolean}) => {
     target: element, offset: ['0.9 end', 'start 0.4' ]
   })
   return(
-    <div className={`${geist.className} w-full bg-zinc-50 dark:bg-neutral-950 border-b border-b-zinc-700`}>
-      <div className="h-full mx-auto w-5/6 max-w-4xl text-neutral-950 dark:text-zinc-50 py-24">
+    <div className={`${geist.className} w-full bg-zinc-50 dark:bg-neutral-900 border-b border-b-zinc-700`}>
+      <div className="h-full mx-auto w-5/6 max-w-4xl text-neutral-900 dark:text-zinc-50 py-12">
         <h1 className={`${geistmono.className} text-xl font-extrabold mb-8`}>About</h1>
         <Paragraph>
           I&apos;m Kyle Huang—a creator, developer, pianist, athlete, and economist. ✨
         </Paragraph>
         <Paragraph>
-          Through a variety of experiences, I&apos;ve gained a diverse set of skills. If you&apos;d like to read some of my thoughts, you can check my blog, where I write articles and stories. 📝
+          Writing allows me to express my thoughts through words. If you&apos;d like to read new content often, you can check my blog, where I write articles and stories. 📝
         </Paragraph>
         <Paragraph>
           I find economics interesting, and I&apos;m currently studying the textbook &quot;Principles of Economics&quot;. The book provides me with thought-provoking information and helps me learn quickly. 📖

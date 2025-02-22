@@ -12,9 +12,9 @@ const Footer = () => {
     <footer className={`${geist.className} w-screen border-t border-zinc-700 pt-14 flex flex-col`}>
       <Marquee
       autoFill={true}
-      className={`${geist.className} py-4 border-y border-neutral-950 dark:border-zinc-500`}>
-        <span className='text-5xl sm:text-7xl mx-2 sm:mx-4 text-neutral-950 dark:text-zinc-50'>Kyle Huang</span>
-        <span className='text-5xl sm:text-7xl mx-2 sm:mx-4 text-neutral-950 dark:text-zinc-50'>-</span>
+      className={`${geist.className} py-4 border-y border-neutral-900 dark:border-zinc-500`}>
+        <span className='text-5xl sm:text-7xl mx-2 sm:mx-4 text-neutral-900 dark:text-zinc-50'>Kyle Huang</span>
+        <span className='text-5xl sm:text-7xl mx-2 sm:mx-4 text-neutral-900 dark:text-zinc-50'>-</span>
       </Marquee>
       <div className='w-full mt-8 flex justify-center mb-4'>
         <div className='w-full max-w-3xl grid grid-rows-[1fr_1px_1fr] sm:grid-cols-[1fr_1px_1fr] sm:grid-rows-none'>
@@ -24,8 +24,8 @@ const Footer = () => {
             <Link href='/resources' className={`${geist.className} text-xl hover:underline`}>Resources</Link>
             <Link href='/contact' className={`${geist.className} text-xl hover:underline`}>Contact</Link>
           </div>
-          <div className='h-full w-px bg-neutral-950 dark:bg-zinc-50 mask-image-y hidden sm:inline'></div>
-          <div className='w-full h-px bg-neutral-950 dark:bg-zinc-50 mask-image-x inline sm:hidden'></div>
+          <div className='h-full w-px bg-neutral-900 dark:bg-zinc-50 mask-image-y hidden sm:inline'></div>
+          <div className='w-full h-px bg-neutral-900 dark:bg-zinc-50 mask-image-x inline sm:hidden'></div>
           <div className='grid grid-cols-2 gap-1 p-4 justify-items-center'>
             <Link href='https://www.youtube.com/@the-kyle-huang' className={`${geist.className} text-xl hover:underline`}>Youtube</Link>
             <Link href='https://www.instagram.com/thekylehuang/' className={`${geist.className} text-xl hover:underline`}>Instagram</Link>

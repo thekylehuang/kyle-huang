@@ -35,7 +35,7 @@ export function ModeToggle() {
         initial={false}
         layoutId={layoutId}
         transition={{duration: 0}}
-        className="w-16 h-7 bg-zinc-50 peer-checked:bg-neutral-950 rounded-full flex items-center px-1.5 transition-colors border border-zinc-700 dark:border-zinc-500 fixed right-4 top-3"
+        className="w-16 h-7 bg-zinc-50 peer-checked:bg-neutral-900 rounded-full flex items-center px-1.5 transition-colors border border-zinc-700 dark:border-zinc-500 fixed right-4 top-3"
       >
         <motion.div
           initial={false}
@@ -46,7 +46,7 @@ export function ModeToggle() {
           transition={{ duration: 0.2, ease: "easeOut" }}
           className="absolute left-2"
         >
-          <Sun size={18} className="text-neutral-950 dark:text-zinc-50" />
+          <Sun size={18} className="text-neutral-900 dark:text-zinc-50" />
         </motion.div>
         <motion.div
           layout
@@ -56,7 +56,7 @@ export function ModeToggle() {
             stiffness: 250,
             damping: 20
           }}
-          className="w-5 h-5 bg-neutral-950 dark:bg-zinc-50 rounded-full"
+          className="w-5 h-5 bg-neutral-900 dark:bg-zinc-50 rounded-full"
           animate={{ x: isDark ? 30 : 0 }}
         />
         <motion.div
@@ -68,7 +68,7 @@ export function ModeToggle() {
           transition={{ duration: 0.2, ease: "easeOut" }}
           className="absolute right-2"
         >
-          <Moon size={18} className="text-neutral-950 dark:text-zinc-50" />
+          <Moon size={18} className="text-neutral-900 dark:text-zinc-50" />
         </motion.div>
       </motion.div>
     </label>

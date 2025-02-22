@@ -15,7 +15,7 @@ const Paragraph = ({children}: {children: ReactNode }) => {
     target: element, offset: ['0.9 end', 'start 0.6' ]
   })
   return(
-    <motion.p className={`${librebaskerville.className} mt-8 mb-8 text-xl xs:text-2xl sm:text-3xl font-regular flex flex-wrap`} 
+    <motion.p className={`${librebaskerville.className} mt-8 mb-8 text-2xl sm:text-3xl font-regular flex flex-wrap`} 
     ref={element}
     style={{ opacity: scrollYProgress }}>
       {children}

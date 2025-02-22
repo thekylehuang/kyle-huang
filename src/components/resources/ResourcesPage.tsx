@@ -12,7 +12,7 @@ const ResourcesPage = () => {
     window.scrollTo(0, 0);
   }, [])
   return(
-    <main className={`${geist.className} text-neutral-950 dark:text-zinc-50`}>
+    <main className={`${geist.className} text-neutral-900 dark:text-zinc-50`}>
       <div className="w-full min-h-screen mt-14">
         <div className="w-5/6 max-w-4xl h-full mx-auto py-8">
           <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl mb-8">

@@ -20,16 +20,16 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className={`${geist.className} fixed left-0 top-0 flex items-center w-full h-14 border-b border-zinc-700 z-50 bg-zinc-50 dark:bg-neutral-950 mb-0`}>
+      <nav className={`${geist.className} fixed left-0 top-0 flex items-center w-full h-14 border-b border-zinc-700 z-50 bg-zinc-50 dark:bg-neutral-900 mb-0`}>
         <div className='flex items-center justify-center h-14 px-4 md:px-3 lg:px-6 border-r border-zinc-700 z-0'>
           <button onClick={toggleBottomSheet}><Menu size={20} className='inline md:hidden'/></button>
-          <Link href='/' className='text-neutral-950 dark:text-zinc-50 text-base font-bold'><Command size={24} className='hidden md:inline-block md:mr-0 lg:mr-2 align-middle -mt-2px' /><span className='hidden md:hidden lg:inline'>Kyle Huang</span></Link>
+          <Link href='/' className='text-neutral-900 dark:text-zinc-50 text-base font-bold'><Command size={24} className='hidden md:inline-block md:mr-0 lg:mr-2 align-middle -mt-2px' /><span className='hidden md:hidden lg:inline'>Kyle Huang</span></Link>
         </div>
         <div className='hidden md:inline-block z-0'>
-          <Link href='/blog' className='text-sm text-neutral-700 dark:text-neutral-400 lg:ml-4 ml-1 font-semibold py-2 lg:px-4 px-3 rounded-lg hover:bg-zinc-200 dark:hover:bg-zinc-900 transition-colors'>Blog</Link>
-          <Link href='/cv' className='text-sm text-neutral-700 dark:text-neutral-400 ml-px font-semibold py-2 lg:px-4 px-3 rounded-lg hover:bg-zinc-200 dark:hover:bg-zinc-900 transition-colors'>CV</Link>
-          <Link href='/resources' className='text-sm text-neutral-700 dark:text-neutral-400 ml-px font-semibold py-2 lg:px-4 px-3 rounded-lg hover:bg-zinc-200 dark:hover:bg-zinc-900 transition-colors'>Resources</Link>
-          <Link href='/contact' className='text-sm text-neutral-700 dark:text-neutral-400 ml-px font-semibold py-2 lg:px-4 px-3 rounded-lg hover:bg-zinc-200 dark:hover:bg-zinc-900 transition-colors'>Contact</Link>
+          <Link href='/blog' className='text-sm text-neutral-700 dark:text-neutral-400 lg:ml-4 ml-1 font-semibold py-2 lg:px-4 px-3 rounded-lg hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-colors'>Blog</Link>
+          <Link href='/cv' className='text-sm text-neutral-700 dark:text-neutral-400 ml-px font-semibold py-2 lg:px-4 px-3 rounded-lg hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-colors'>CV</Link>
+          <Link href='/resources' className='text-sm text-neutral-700 dark:text-neutral-400 ml-px font-semibold py-2 lg:px-4 px-3 rounded-lg hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-colors'>Resources</Link>
+          <Link href='/contact' className='text-sm text-neutral-700 dark:text-neutral-400 ml-px font-semibold py-2 lg:px-4 px-3 rounded-lg hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-colors'>Contact</Link>
         </div>
         <div className='fixed right-0 h-14 border-l border-zinc-700 z-0 w-24'>
           <ModeToggle />
@@ -46,7 +46,7 @@ const Navbar = () => {
             />
           )}
         </AnimatePresence>
-        <motion.div className='fixed -bottom-6 left-0 right-0 w-full bg-zinc-50 dark:bg-neutral-950 shadow-lg border border-zinc-700 h-1/2 rounded-t-2xl md:hidden z-30'
+        <motion.div className='fixed -bottom-6 left-0 right-0 w-full bg-zinc-50 dark:bg-neutral-900 shadow-lg border border-zinc-700 h-1/2 rounded-t-2xl md:hidden z-30'
         initial={{ y: '100%' }}
         exit={{ y: '100%' }}
         animate={{ y: isExpanded ? 0 : '100%' }}

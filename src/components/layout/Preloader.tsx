@@ -20,12 +20,12 @@ const Preloader = () => {
     initial={{ y: 0 }}
     exit={{ y: "-100vh" }}
     transition={{ ease: easeOut, duration: 0.5 }}
-    className="h-full w-full fixed top-0 left-0 z-100 bg-zinc-50 dark:bg-neutral-950 flex items-center justify-center border-b border-zinc-700">
+    className="h-full w-full fixed top-0 left-0 z-100 bg-zinc-50 dark:bg-neutral-900 flex items-center justify-center border-b border-zinc-700">
       <motion.h1 
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ ease: easeOut, duration: 0.4 }}
-      className="font-extrabold text-4xl sm:text-5xl text-neutral-950 dark:text-zinc-50">
+      className="font-extrabold text-4xl sm:text-5xl text-neutral-900 dark:text-zinc-50">
         {words[index]}
       </motion.h1>
     </motion.div>
