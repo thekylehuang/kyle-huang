@@ -9,7 +9,7 @@ import React from "react"
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <html lang="en" suppressHydrationWarning className="overflow-x-hidden">
+      <html lang="en" suppressHydrationWarning>
         <body className="antialiased dark:bg-neutral-950 flex flex-col gap-0">
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
             <Navbar />
