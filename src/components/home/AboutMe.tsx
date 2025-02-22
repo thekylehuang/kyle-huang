@@ -26,7 +26,7 @@ const AboutMe = ({isLight} : {isLight : boolean}) => {
           I&apos;m Kyle Huang—a creator, developer, pianist, athlete, and economist. ✨
         </Paragraph>
         <Paragraph>
-          Through a large variety of experiences, I&apos;ve gained a diverse set of skills. If you&apos;d like to read some of my thoughts, you can check my blog, where I write articles and short stories. 📝
+          Through a variety of experiences, I&apos;ve gained a diverse set of skills. If you&apos;d like to read some of my thoughts, you can check my blog, where I write articles and stories. 📝
         </Paragraph>
         <Paragraph>
           I find economics interesting, and I&apos;m currently studying the textbook &quot;Principles of Economics&quot;. The book provides me with thought-provoking information and helps me learn quickly. 📖
