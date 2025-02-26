@@ -114,3 +114,22 @@
   font-weight: bold;
 }
 
+/* Code block styling */
+.markdown-container pre {
+  background-color: #2e2e2e;
+  color: #f5f5f5;
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  font-family: 'Courier New', monospace;
+  margin-top: 1.5rem;
+}
+
+/* Inline code styling */
+.markdown-container code {
+  background-color: #f4f4f4;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+}
