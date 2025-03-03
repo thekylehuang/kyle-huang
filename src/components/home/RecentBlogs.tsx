@@ -72,7 +72,7 @@ const RecentBlogs = () => {
   }, []);
   return(
     <div className="w-full bg-zinc-50 dark:bg-neutral-900 border-b border-b-zinc-700">
-      <div className="h-full mx-auto w-5/6 max-w-4xl text-neutral-900 dark:text-zinc-50 py-12">
+      <div className="h-full mx-auto w-5/6 max-w-4xl text-neutral-900 dark:text-zinc-50 py-12 border-x border-zinc-700 px-8 xl:px-16 box-content">
         <h1 className={`${geistmono.className} text-xl font-extrabold mb-8`}>Recent Blogs</h1>
         <div className="mb-8">
           {posts.slice(0,4).map((post, index) => (
