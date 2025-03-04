@@ -13,6 +13,8 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination";
 import { useSearchParams } from "next/navigation";
+import Navbar from '@/components/layout/Navbar';
+import Footer from "@/components/layout/Footer";
 
 
 const geist = Geist({ subsets: ['latin'] })
@@ -83,30 +85,34 @@ const BlogList = () => {
   }, [currentPage]);
 
   return (
-    <main className="flex justify-center mt-14 min-h-screen pt-8 pb-16">
-      <div className="max-w-3xl w-11/12 mt-14">
-        <h1 className={`${geist.className} scroll-m-20 font-extrabold tracking-tight text-5xl text-neutral-900 dark:text-zinc-50 ml-3`}>Writing</h1>
-        <div className='mt-8 lg:mt-36'>
-          {posts.map(post => (
-            <BlogCard key={post.id} post={post}/>
-          ))}
+    <>
+      <Navbar />
+      <main className="flex justify-center mt-14 min-h-screen pt-8 pb-16">
+        <div className="max-w-3xl w-11/12 mt-14">
+          <h1 className={`${geist.className} scroll-m-20 font-extrabold tracking-tight text-5xl text-neutral-900 dark:text-zinc-50 ml-3`}>Writing</h1>
+          <div className='mt-8 lg:mt-36'>
+            {posts.map(post => (
+              <BlogCard key={post.id} post={post}/>
+            ))}
+          </div>
+          <div className="mt-10">
+            <Pagination>
+              <PaginationContent>
+                {/*Render the "previous" button*/}
+                <PaginationItem>
+                  <PaginationPrevious href={`/blog?page=${currentPage - 1}`} disabled={currentPage === 1} />
+                </PaginationItem>
+                {/*Render the "next" button*/}
+                <PaginationItem>
+                  <PaginationNext href={`/blog?page=${currentPage + 1}`} disabled={currentPage === totalPages} />
+                </PaginationItem>
+              </PaginationContent>
+            </Pagination>
+          </div>
         </div>
-        <div className="mt-10">
-          <Pagination>
-            <PaginationContent>
-              {/*Render the "previous" button*/}
-              <PaginationItem>
-                <PaginationPrevious href={`/blog?page=${currentPage - 1}`} disabled={currentPage === 1} />
-              </PaginationItem>
-              {/*Render the "next" button*/}
-              <PaginationItem>
-                <PaginationNext href={`/blog?page=${currentPage + 1}`} disabled={currentPage === totalPages} />
-              </PaginationItem>
-            </PaginationContent>
-          </Pagination>
-        </div>
-      </div>
-    </main>
+      </main>
+      <Footer />
+    </>
   );
 };
 
