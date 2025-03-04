@@ -7,6 +7,8 @@ import { Geist } from "next/font/google";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import Preloader from "@/components/layout/Preloader";
+import Navbar from '@/components/layout/Navbar'
+import Footer from "@/components/layout/Footer"
 import MarqueeComponent from "./Marquee";
 import AboutMe from "./AboutMe";
 import Achievements from "./Achievements";
@@ -67,13 +69,14 @@ const HomePage = () => {
   if (!mounted) return null;
   return(
     <>
+      <Navbar />
       <main className={`${geist.className} mt-14`}>
         <AnimatePresence mode="wait">
           {isLoading &&
             <Preloader />
           }
         </AnimatePresence>
-        <div className='h-[120vh] w-full dark:bg-neutral-950 relative overflow-hidden' ref={heroSectionRef}>
+        <div className='h-[120vh] w-full dark:bg-neutral-900 relative overflow-hidden' ref={heroSectionRef}>
           <motion.h1 className="font-black text-[35vw] sm:text-[clamp(1rem,30vw,700px)] absolute left-0 right-0 text-center z-0 text-black dark:text-zinc-50 leading-none top-[8vh]"
           style={{ y: backgroundY}}>KYLE</motion.h1>
           <motion.div style={{ y: foregroundY }} className="z-10 absolute bottom-0 h-5/6 w-full">
@@ -87,6 +90,7 @@ const HomePage = () => {
         <RecentBlogs />
         <Contact />
       </main>
+      <Footer />
     </>
   );
 }

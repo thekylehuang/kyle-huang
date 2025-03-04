@@ -38,7 +38,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className='max-w-3xl mx-auto w-full py-4 flex justify-center border-t border-zinc-700'>
+      <div className={`${geistmono.className} max-w-3xl mx-auto w-full py-4 flex justify-center border-t border-zinc-700`}>
         <p>© {(new Date().getFullYear())} Kyle Huang. All Rights Reserved.</p>
       </div>
     </footer>

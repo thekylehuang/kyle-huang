@@ -30,22 +30,22 @@ const Contact = () => {
         </Paragraph>
         <motion.div className="flex gap-4" ref={element} style={{opacity: scrollYProgress}}>
           <a href="https://www.instagram.com/thekylehuang/">
-            <div className="bg-zinc-200 w-12 h-12 rounded-md border border-zinc-600 dark:bg-neutral-800 flex justify-center items-center">
+            <div className="bg-zinc-200 w-12 h-12 rounded-md border border-zinc-600 dark:bg-neutral-800 flex justify-center items-center hover:bg-zinc-300 dark:hover:bg-neutral-900 transition-colors">
               <FontAwesomeIcon icon={faInstagram} size="xl" />
             </div>
           </a>
           <a href="https://www.instagram.com/thekylehuang/">
-            <div className="bg-zinc-200 w-12 h-12 rounded-md border border-zinc-600 dark:bg-neutral-800 flex justify-center items-center">
+            <div className="bg-zinc-200 w-12 h-12 rounded-md border border-zinc-600 dark:bg-neutral-800 flex justify-center items-center hover:bg-zinc-300 dark:hover:bg-neutral-900 transition-colors">
               <FontAwesomeIcon icon={faLinkedin} size="xl" />
             </div>
           </a>
           <a href="https://www.youtube.com/@the-kyle-huang">
-            <div className="bg-zinc-200 w-12 h-12 rounded-md border border-zinc-600 dark:bg-neutral-800 flex justify-center items-center">
+            <div className="bg-zinc-200 w-12 h-12 rounded-md border border-zinc-600 dark:bg-neutral-800 flex justify-center items-center hover:bg-zinc-300 dark:hover:bg-neutral-900 transition-colors">
             <FontAwesomeIcon icon={faYoutube} size="xl" />
             </div>
           </a>
           <a href="https://github.com/thekylehuang">
-            <div className="bg-zinc-200 w-12 h-12 rounded-md border border-zinc-600 dark:bg-neutral-800 flex justify-center items-center">
+            <div className="bg-zinc-200 w-12 h-12 rounded-md border border-zinc-600 dark:bg-neutral-800 flex justify-center items-center hover:bg-zinc-300 dark:hover:bg-neutral-900 transition-colors">
             <FontAwesomeIcon icon={faGithub} size="xl" />
             </div>
           </a>
