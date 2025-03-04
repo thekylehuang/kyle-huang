@@ -23,7 +23,7 @@ const Contact = () => {
   })
   return(
     <div className={`${geist.className} w-full bg-zinc-50 dark:bg-neutral-900`}>
-      <div className="h-full mx-auto w-5/6 max-w-4xl text-neutral-900 dark:text-zinc-50 py-12 border-x border-zinc-700 px-8 xl:px-16 box-content">
+      <div className="h-full mx-auto w-5/6 max-w-4xl text-neutral-900 dark:text-zinc-50 py-12 border-opacity-0 xs:border-x xs:border-opacity-100 border-zinc-700 px-0 xs:px-8 xl:px-16 box-content">
         <h1 className={`${geistmono.className} text-xl font-extrabold mb-8`}>Contact</h1>
         <Paragraph>
           You can reach me through my contact page or my social media.
