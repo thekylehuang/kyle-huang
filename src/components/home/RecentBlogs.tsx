@@ -47,7 +47,7 @@ const BlogCard = ({ post, index }: { post: Post, index: number }) => {
           duration: 0.6,
           ease: 'easeOut',
         }}>
-          <h1 className={`${librebaskerville.className} text-neutral-900 dark:text-zinc-50 scroll-m-20 font-semibold tracking-tight text-lg lg:text-xl`}>{post.title}</h1>
+          <h2 className={`${librebaskerville.className} text-neutral-900 dark:text-zinc-50 scroll-m-20 font-semibold tracking-tight text-lg lg:text-xl`}>{post.title}</h2>
           <p className={`${librebaskerville.className} text-neutral-600 dark:text-zinc-400 font-semibold inline-block text-lg lg:text-xl`}>{formatDate(post.created_at)}</p>
         </motion.div>
       </Link>

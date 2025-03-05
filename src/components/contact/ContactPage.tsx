@@ -50,7 +50,7 @@ const ContactForm = () => {
   return(
     <>
       <Navbar />
-      <div className="mt-14 mx-auto w-11/12 max-w-[500px] min-h-screen text-neutral-900 dark:text-zinc-50">
+      <div className="mt-14 mx-auto w-11/12 max-w-[500px] min-h-screen text-neutral-900 dark:text-zinc-50 pb-14">
         <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl mt-14 mb-14">Contact Me</h1>
         <form onSubmit={handleSubmit}>
           <Label htmlFor="email">Email</Label>
