@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       type: "article",
       images: [
         {
-          url: "https://kyle-huang.vercel.app/images/OpenGraphImage.png",
+          url: "https://www.kyle-huang.me/images/OpenGraphImage.png",
           width: 1200,
           height: 630,
           alt: `${post.title} Cover Image`,

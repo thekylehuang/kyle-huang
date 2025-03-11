@@ -8,14 +8,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Kyle Huang | Resources',
     description: 'Find resources and information about Kyle Huang.',
-    images: [{ url: 'https://kyle-huang.vercel.app/images/OpenGraphImage.png' }],
-    url: 'https://kyle-huang.vercel.app',
+    images: [{ url: 'https://www.kyle-huang.me/images/OpenGraphImage.png' }],
+    url: 'https://www.kyle-huang.me',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Kyle Huang | Resources',
     description: 'Find resources and information about Kyle Huang.',
-    images: [{ url: 'https://kyle-huang.vercel.app/images/OpenGraphImage.png' }],
+    images: [{ url: 'https://www.kyle-huang.me/images/OpenGraphImage.png' }],
   },
 }
 
