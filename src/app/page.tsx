@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'Kyle Huang | Creator & Polymath',
   description: 'Kyle Huang is a creator and a polymath, with an interest in finance and economics.',
   keywords: ['Kyle Huang', 'creator', 'finance', 'technology', 'economics', 'personal growth', 'finance'],
+  metadataBase: new URL('https://www.kyle-huang.me'),
   openGraph: {
     title: 'Kyle Huang | Creator & Polymath',
     description: 'Kyle Huang is a creator and a polymath, with an interest in finance and economics.',

@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: 'Kyle Huang | Resources',
   description: 'Find resources and information about Kyle Huang.',
   keywords: ['Kyle Huang', 'creator', 'finance', 'technology', 'economics', 'personal growth', 'finance'],
+  metadataBase: new URL('https://www.kyle-huang.me'),
   openGraph: {
     title: 'Kyle Huang | Resources',
     description: 'Find resources and information about Kyle Huang.',

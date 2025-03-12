@@ -79,9 +79,9 @@ const HomePage = () => {
         <div className='h-[120vh] w-full dark:bg-neutral-900 relative overflow-hidden' ref={heroSectionRef}>
           <motion.h1 className="font-black text-[35vw] sm:text-[clamp(1rem,30vw,700px)] absolute left-0 right-0 text-center z-0 text-black dark:text-zinc-50 leading-none top-[8vh]"
           style={{ y: backgroundY}}>KYLE</motion.h1>
-          <motion.div style={{ y: foregroundY }} className="z-10 absolute bottom-0 h-5/6 w-full">
-            <Image src='/images/home/Gong Yoo.png' width={3320} height={2940} alt="Literally me" 
-            className="mx-auto object-cover h-full w-auto"/>
+          <motion.div style={{ y: foregroundY }} className="z-10 absolute -bottom-24 h-[95%] w-full">
+            <Image src='/images/home/kyle-graduation.png' width={1024} height={1280} alt="Portrait of Myself" 
+            className="mx-auto object-cover h-full w-auto z-10"/>
           </motion.div>
         </div>
         <MarqueeComponent />
