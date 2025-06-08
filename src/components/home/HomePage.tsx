@@ -80,7 +80,7 @@ const HomePage = () => {
           <motion.h1 className="font-black text-[35vw] sm:text-[clamp(1rem,30vw,700px)] absolute left-0 right-0 text-center z-0 text-black dark:text-zinc-50 leading-none top-[8vh]"
           style={{ y: backgroundY}}>KYLE</motion.h1>
           <motion.div style={{ y: foregroundY }} className="z-10 absolute -bottom-24 h-[95%] w-full">
-            <Image src='/images/home/kyle-graduation.png' width={1024} height={1280} alt="Portrait of Myself" 
+            <Image src='/images/home/kyle-tie.png' width={923} height={1635} alt="Portrait of Myself" 
             className="mx-auto object-cover h-full w-auto z-10"/>
           </motion.div>
         </div>
